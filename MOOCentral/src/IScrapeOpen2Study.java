@@ -1,0 +1,109 @@
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.select.Elements;
+import org.jsoup.nodes.Element;
+import java.sql.*;
+import java.io.IOException;
+import java.util.ArrayList;
+
+public class IScrapeOpen2Study {
+	public static void main(String[] args) throws IOException, InstantiationException, IllegalAccessException, ClassNotFoundException, SQLException {
+		Class.forName("com.mysql.jdbc.Driver").newInstance();
+		java.sql.Connection connection = DriverManager.getConnection("jdbc:mysql://localhost/MOOCentral","root","");
+		Statement statement = connection.createStatement();
+		
+		String site = "https://www.open2study.com";
+		String crcsUrl = "https://www.open2study.com/courses";
+		Document doc = Jsoup.connect(crcsUrl).get();
+		Elements ele = doc.select("div[class*=views-row]");
+		Elements link = ele.select("a[href]");
+		System.out.println(link.size());
+		for (int i = 0; i < link.size(); i++)
+		{
+			String node_id = link.get(i).attr("href");
+			String course_link = site + node_id;
+			
+			String course_id = node_id.replace("/node/", "");
+			
+			////// Visit each course page to scrape corresponding entries.
+			Document crsdoc = Jsoup.connect(course_link).get();
+
+			String short_desc = crsdoc.select("div[class=offering_body]").get(0).text();
+			
+			String long_desc_top = crsdoc.select("div[class=summary]").get(0).text();
+			String long_desc_bottom = crsdoc.select("div[class=full-body]").get(0).text();
+			String long_desc = long_desc_top + long_desc_bottom;
+			long_desc = long_desc.replaceAll("'", "''");
+			
+			String video_link = crsdoc.select("iframe").attr("src");
+			
+			String profname = crsdoc.select("div[id=subject-teacher-tagline]").get(0).text();
+			profname = profname.replace("by ", "");
+			
+			String profimage = crsdoc.select("img[class=image-style-teacher-small-profile]").get(0).attr("src");
+
+			String title = crsdoc.select("h1[class=page-title offering_title]").get(0).text();
+			
+			String category = title.split("[\\(\\)]")[1];
+			
+			String university = crsdoc.select("div[id=provider-logo]").get(0).select("a").get(0).attr("href");
+			university = university.replace("/educators/", "");
+			
+			////// TODO: 
+			////// date type needed for start_date in database.
+			////// int type needed for course_length in database.
+			String start_date = crsdoc.select("h2[class=offering_dates_date]").get(0).text();
+			String end_date = crsdoc.select("h2[class=offering_dates_date]").get(1).text();			
+			String course_length = "TODO";
+
+			////// Not available, default values assumed.
+			String course_image = "N/A";
+			String course_fee = "Free";
+			String language = "English";
+			String certificate = "No";
+			
+			String query = "INSERT INTO `MOOCentral`.`coursedata` (`id`, `title`, `short_desc`, `long_desc`, `course_link`, `video_link`)" + 
+			"VALUES(NULL, '"+ title+ "','" + short_desc + "','" + long_desc + "','" + course_link + "','" + video_link + "')";
+			
+			System.out.println(query);
+			statement.executeUpdate(query);
+			
+			
+			/*
+			System.out.println("**************");
+			System.out.println("course details");
+			System.out.println("**************");
+			System.out.println("       id: " + i);
+			System.out.println(" profname: " + profname);
+			System.out.println("profimage: " + profimage);
+			System.out.println("course_id: " + course_id);
+			System.out.println("***********");
+			System.out.println("course data");
+			System.out.println("***********");
+			System.out.println("           id: " + i);
+			System.out.println("        title: " + title);
+			System.out.println("   short_desc: " + short_desc);
+			System.out.println("    long_desc: " + long_desc);
+			System.out.println("  course_link: " + course_link);
+			System.out.println("   video_link: " + video_link);
+			System.out.println("   start_date: " + start_date);
+			System.out.println("course_length: " + course_length);
+			System.out.println(" course_image: " + course_image);
+			System.out.println("     category: " + category);
+			System.out.println("         site: " + site);
+			System.out.println("   course_fee: " + course_fee);
+			System.out.println("     language: " + language);
+			System.out.println("  certificate: " + certificate);
+			System.out.println("   university: " + university);
+			
+			*/
+		}
+		statement.close();
+		
+		//String query = "insert into course_data values(null,'"+CourseName+"','"+SCrsDesrpTemp+"','"+CrsDes+"','"+crsurl+"','"+youtube+"',"+StrDate+","+crsduration+",'"+CrsImg+"','','Edx')";
+		//System.out.println(query);                	
+		//statement.executeUpdate(query);// skip writing to database; focus on data printout to a text file instead.
+		//statement.close(); 
+		//connection.close();   
+	}
+}
