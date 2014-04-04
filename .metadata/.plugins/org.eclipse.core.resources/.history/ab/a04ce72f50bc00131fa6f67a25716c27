@@ -27,11 +27,6 @@ public class Canvas {
 		//make sure you create a database named scrapedcourse in your local mysql database before running this code
 		//default mysql database in your local machine is ID:root with no password
 		//you can download scrapecourse database template from your Canvas account->modules->Team Project area
-		Class.forName("com.mysql.jdbc.Driver").newInstance();
-		java.sql.Connection connection = DriverManager.getConnection("jdbc:mysql://localhost/MOOCentral","root","");
-		Statement statement = connection.createStatement();
-		
-		
 		for(int a=0; a < pgcrs.size(); a++)
 		{
 			String furl = (String) pgcrs.get(a);
@@ -45,12 +40,12 @@ public class Canvas {
 				//Statement statement = connection.createStatement();
 				//Course Name
 				String CrsName = link.get(j).attr("title");
-	//print			System.out.println("Title:       " + CrsName);
+				System.out.println("Title:       " + CrsName);
 				CrsName = CrsName.replace("'", "''");
 				CrsName = CrsName.replace(",", "");
 				//Course URL
 				String CrsURL = link.get(j).attr("href");
-	//print			System.out.println("URL:         " + CrsURL);
+				System.out.println("URL:         " + CrsURL);
 				//Connect to the course page
 				Document crsdoc = Jsoup.connect(CrsURL).get();
 				//Get the course description element
@@ -59,16 +54,16 @@ public class Canvas {
 				CrsDesc = CrsDesc.replace("?", "");
 				CrsDesc = CrsDesc.replace("'", "''");
 				CrsDesc = CrsDesc.replace(",", "");
-	//print			System.out.println("Description: " + CrsDesc);
+				System.out.println("Description: " + CrsDesc);
 				//Get the course image
 				Element img = crsdoc.select("meta[property=og:image:secure_url]").first();
 				String CrsImg = img.attr("content");
-	//print			System.out.println("Image:       " + CrsImg);
+				System.out.println("Image:       " + CrsImg);
 				//Get the course school image
 				Element schoolimg = crsdoc.select("div.school-logo > img").first();
 				String CrsSchoolImg = schoolimg.attr("src");
 				CrsSchoolImg = "https://www.canvas.net" + CrsSchoolImg;
-	//print				System.out.println("School Logo: " + CrsSchoolImg);
+				System.out.println("School Logo: " + CrsSchoolImg);
 				//Get the professor logo
 				//Get the course school image
 				Element profimg = crsdoc.select("div.instructor-bio > img").first();
@@ -76,8 +71,8 @@ public class Canvas {
 				String CrsProfImg = profimg.attr("src");
 				String CrsProfName = profname.text();
 				CrsProfImg = "https://www.canvas.net" + CrsProfImg;
-	//print			System.out.println("Professor:   " + CrsProfName + " - " + CrsProfImg);
-	//print			System.out.println("-----------------------------------------------");
+				System.out.println("Professor:   " + CrsProfName + " - " + CrsProfImg);
+				System.out.println("-----------------------------------------------");
 				Elements crsheadele = crsdoc.select("div[class=gray-noise-box pad-box no-sides]");
 				String youtube = "write your own code";
 				Elements crsbodyele = crsdoc.select("div[class=light-bg pad-box no-sides top-rule-box]");
@@ -88,21 +83,6 @@ public class Canvas {
 				{
 					CrsDes = CrsDes.replace("?", "");
 				}
-				
-				String video_link = "does not exist";
-				String start_date = "i cant find it";
-				String course_length = "cant find";
-				String category = "cant find";
-				String site = "cant find";
-				
-				String query = "INSERT INTO `MOOCentral`.`coursedata` (`id`, `title`, `short_desc`,`course_link`, `video_link`, `start_date`, `course_length`, `course_image`, `category`, `site`, `profname`, `profimage` )" + 
-						"VALUES(NULL, '" + CrsName + "','" + CrsDesc + "','" + CrsURL + "','" + video_link + "','" + start_date + "','" + course_length + "','" + CrsImg + "','" + category + "','" + site + "','" + CrsProfName + "','" + CrsProfImg + "')";
-				
-				System.out.println(query);
-				statement.executeUpdate(query);
-				
-				
-				
 //				String Date = crsdoc.select("h4[class=emboss-light] > p").text();
 //				String StrDate = Date.substring(Date.indexOf(":")+1, Date.length()); //Start date after the :
 //				String datechk = StrDate.substring(0, StrDate.indexOf(" "));

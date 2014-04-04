@@ -50,11 +50,11 @@
 
 		echo "<td>" . $row['start_date'] . "</td>";
 		echo "<td>" . $row['course_length'] . "</td>";
-		echo "<td>" . $row['course_image'] . "</td>";
+		echo "<td><image src=\"" . $row['course_image'] . "\" alt=\"profimage\" height=\"100\" width=\"100\"></td>";
 		echo "<td>" . $row['category'] . "</td>";
 		echo "<td>" . $row['site'] . "</td>";
 		echo "<td>" . $row['profname'] . "</td>";
-		echo "<td><image src=\"" . $row['profimage'] . "\" alt=\"profimage\"></td>";
+		echo "<td><image src=\"" . $row['profimage'] . "\" alt=\"profimage\" height=\"100\" width=\"100\"></td>";
 
 		echo "</tr>";
 	}

@@ -9,7 +9,7 @@ CREATE TABLE IF NOT EXISTS `coursedata` (
   `short_desc` text COLLATE utf8_unicode_ci NOT NULL,
   `course_link` text COLLATE utf8_unicode_ci NOT NULL,
   `video_link` text COLLATE utf8_unicode_ci NOT NULL,
-  `start_date` text COLLATE utf8_unicode_ci NOT NULL,
+  `start_date` date COLLATE utf8_unicode_ci NOT NULL,
   `course_length` text COLLATE utf8_unicode_ci NOT NULL,
   `course_image` text COLLATE utf8_unicode_ci NOT NULL,
   `category` text COLLATE utf8_unicode_ci NOT NULL,
