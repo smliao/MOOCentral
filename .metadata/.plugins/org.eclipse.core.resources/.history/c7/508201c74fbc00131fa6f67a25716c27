@@ -56,8 +56,6 @@ public class IScrapeOpen2Study {
 			String end_date = crsdoc.select("h2[class=offering_dates_date]").get(1).text();			
 			String course_length = "TODO";
 
-			
-			
 			////// Not available, default values assumed.
 			String course_image = "N/A";
 			String course_fee = "Free";
