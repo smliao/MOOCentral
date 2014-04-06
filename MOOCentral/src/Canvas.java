@@ -28,7 +28,7 @@ public class Canvas {
 		//default mysql database in your local machine is ID:root with no password
 		//you can download scrapecourse database template from your Canvas account->modules->Team Project area
 		Class.forName("com.mysql.jdbc.Driver").newInstance();
-		java.sql.Connection connection = DriverManager.getConnection("jdbc:mysql://localhost/MOOCentral","root","");
+		java.sql.Connection connection = DriverManager.getConnection("jdbc:mysql://localhost/MOOCentral","root","root");
 		Statement statement = connection.createStatement();
 		
 		
@@ -73,7 +73,15 @@ public class Canvas {
 				//Get the course school image
 				Element profimg = crsdoc.select("div.instructor-bio > img").first();
 				Element profname = crsdoc.select("div.instructor-bio > h3").first();
-				String CrsProfImg = profimg.attr("src");
+				String CrsProfImg;
+				if(profimg != null) 
+				{
+					CrsProfImg = profimg.attr("src");
+				}
+				else
+				{
+					CrsProfImg = "/null";
+				}
 				String CrsProfName = profname.text();
 				CrsProfImg = "https://www.canvas.net" + CrsProfImg;
 	//print			System.out.println("Professor:   " + CrsProfName + " - " + CrsProfImg);
@@ -90,10 +98,10 @@ public class Canvas {
 				}
 				
 				String video_link = "does not exist";
-				String start_date = "i cant find it";
-				String course_length = "cant find";
-				String category = "cant find";
-				String site = "cant find";
+				String start_date = "1900-01-01";
+				String course_length = "have to compute";
+				String category = "does not exist";
+				String site = url;
 				
 				String query = "INSERT INTO `MOOCentral`.`coursedata` (`id`, `title`, `short_desc`,`course_link`, `video_link`, `start_date`, `course_length`, `course_image`, `category`, `site`, `profname`, `profimage` )" + 
 						"VALUES(NULL, '" + CrsName + "','" + CrsDesc + "','" + CrsURL + "','" + video_link + "','" + start_date + "','" + course_length + "','" + CrsImg + "','" + category + "','" + site + "','" + CrsProfName + "','" + CrsProfImg + "')";
