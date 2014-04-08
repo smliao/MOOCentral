@@ -31,3 +31,833 @@ Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.
 
 !ENTRY org.eclipse.core.net 1 0 2014-04-07 21:03:39.481
 !MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.equinox.p2.operations 4 0 2014-04-07 21:47:18.991
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:47:19.004
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:19.004
+!MESSAGE Software being installed: Resin Support for MyEclipse 9.1.0.me201106292137 (com.genuitec.myeclipse.resin.feature.group 9.1.0.me201106292137)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:19.004
+!MESSAGE Missing requirement: Auxiliary JSP Editor Support for MyEclipse 2.0.0.me201010052030 (org.jboss.tools.jst.jsp 2.0.0.me201010052030) requires 'bundle org.eclipse.help.appserver 0.0.0' but it could not be found
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:19.004
+!MESSAGE Missing requirement: Auxiliary JSP Editor Support for MyEclipse 2.0.0.me201012090051 (org.jboss.tools.jst.jsp 2.0.0.me201012090051) requires 'bundle org.eclipse.help.appserver 0.0.0' but it could not be found
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:47:19.004
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:19.004
+!MESSAGE From: MyEclipse EASIE Resin 9.0.0.me201105301859 (com.genuitec.eclipse.easie.resin 9.0.0.me201105301859)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:19.004
+!MESSAGE To: bundle com.genuitec.eclipse.wdt.jsp.debug 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:47:19.004
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:19.004
+!MESSAGE From: MyEclipse Java Enterprise Development Tooling 9.0.0.me201009231754 (com.genuitec.eclipse.j2eedt.core 9.0.0.me201009231754)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:19.004
+!MESSAGE To: bundle org.jboss.tools.jst.web.ui 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:47:19.004
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:19.004
+!MESSAGE From: MyEclipse Java Enterprise Development Tooling 9.0.0.me201101251749 (com.genuitec.eclipse.j2eedt.core 9.0.0.me201101251749)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:19.004
+!MESSAGE To: bundle org.jboss.tools.jst.web.ui 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:47:19.005
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:19.005
+!MESSAGE From: MyEclipse Java Enterprise Development Tooling 9.0.0.me201102091112 (com.genuitec.eclipse.j2eedt.core 9.0.0.me201102091112)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:19.005
+!MESSAGE To: bundle org.jboss.tools.jst.web.ui 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:47:19.005
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:19.005
+!MESSAGE From: MyEclipse Java Enterprise Development Tooling 9.0.0.me201103181703 (com.genuitec.eclipse.j2eedt.core 9.0.0.me201103181703)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:19.005
+!MESSAGE To: bundle org.jboss.tools.jst.web.ui 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:47:19.005
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:19.005
+!MESSAGE From: MyEclipse Java Enterprise Development Tooling 9.0.0.me201106292137 (com.genuitec.eclipse.j2eedt.core 9.0.0.me201106292137)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:19.005
+!MESSAGE To: bundle org.jboss.tools.jst.web.ui 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:47:19.005
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:19.005
+!MESSAGE From: MyEclipse JSP Debug Tooling 9.0.0.me201009171018 (com.genuitec.eclipse.wdt.jsp.debug 9.0.0.me201009171018)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:19.005
+!MESSAGE To: bundle com.genuitec.eclipse.j2eedt.core 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:47:19.005
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:19.005
+!MESSAGE From: MyEclipse JSP Debug Tooling 9.0.0.me201012090051 (com.genuitec.eclipse.wdt.jsp.debug 9.0.0.me201012090051)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:19.005
+!MESSAGE To: bundle com.genuitec.eclipse.j2eedt.core 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:47:19.005
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:19.005
+!MESSAGE From: MyEclipse JSP Debug Tooling 9.0.0.me201105051700 (com.genuitec.eclipse.wdt.jsp.debug 9.0.0.me201105051700)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:19.005
+!MESSAGE To: bundle com.genuitec.eclipse.j2eedt.core 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:47:19.005
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:19.006
+!MESSAGE From: Resin Support for MyEclipse 9.1.0.me201106292137 (com.genuitec.myeclipse.resin.feature.group 9.1.0.me201106292137)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:19.006
+!MESSAGE To: com.genuitec.eclipse.easie.resin [9.0.0.me201105301859]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:47:19.006
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:19.006
+!MESSAGE From: Web XML Editors Support for MyEclipse 2.0.0.me201009141935 (org.jboss.tools.jst.web.ui 2.0.0.me201009141935)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:19.006
+!MESSAGE To: bundle org.jboss.tools.jst.jsp 2.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:47:19.006
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:19.006
+!MESSAGE From: Web XML Editors Support for MyEclipse 2.0.0.me201012090051 (org.jboss.tools.jst.web.ui 2.0.0.me201012090051)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:19.006
+!MESSAGE To: bundle org.jboss.tools.jst.jsp 2.0.0
+
+!ENTRY org.eclipse.equinox.p2.operations 4 0 2014-04-07 21:47:19.051
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:47:19.051
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:19.051
+!MESSAGE Software being installed: Resin Support for MyEclipse 9.1.0.me201106292137 (com.genuitec.myeclipse.resin.feature.group 9.1.0.me201106292137)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:19.051
+!MESSAGE Missing requirement: Auxiliary JSP Editor Support for MyEclipse 2.0.0.me201010052030 (org.jboss.tools.jst.jsp 2.0.0.me201010052030) requires 'bundle org.eclipse.help.appserver 0.0.0' but it could not be found
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:19.051
+!MESSAGE Missing requirement: Auxiliary JSP Editor Support for MyEclipse 2.0.0.me201012090051 (org.jboss.tools.jst.jsp 2.0.0.me201012090051) requires 'bundle org.eclipse.help.appserver 0.0.0' but it could not be found
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:47:19.051
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:19.051
+!MESSAGE From: MyEclipse EASIE Resin 9.0.0.me201105301859 (com.genuitec.eclipse.easie.resin 9.0.0.me201105301859)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:19.051
+!MESSAGE To: bundle com.genuitec.eclipse.wdt.jsp.debug 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:47:19.051
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:19.051
+!MESSAGE From: MyEclipse Java Enterprise Development Tooling 9.0.0.me201009231754 (com.genuitec.eclipse.j2eedt.core 9.0.0.me201009231754)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:19.052
+!MESSAGE To: bundle org.jboss.tools.jst.web.ui 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:47:19.052
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:19.052
+!MESSAGE From: MyEclipse Java Enterprise Development Tooling 9.0.0.me201101251749 (com.genuitec.eclipse.j2eedt.core 9.0.0.me201101251749)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:19.052
+!MESSAGE To: bundle org.jboss.tools.jst.web.ui 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:47:19.052
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:19.052
+!MESSAGE From: MyEclipse Java Enterprise Development Tooling 9.0.0.me201102091112 (com.genuitec.eclipse.j2eedt.core 9.0.0.me201102091112)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:19.052
+!MESSAGE To: bundle org.jboss.tools.jst.web.ui 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:47:19.052
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:19.052
+!MESSAGE From: MyEclipse Java Enterprise Development Tooling 9.0.0.me201103181703 (com.genuitec.eclipse.j2eedt.core 9.0.0.me201103181703)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:19.052
+!MESSAGE To: bundle org.jboss.tools.jst.web.ui 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:47:19.052
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:19.052
+!MESSAGE From: MyEclipse Java Enterprise Development Tooling 9.0.0.me201106292137 (com.genuitec.eclipse.j2eedt.core 9.0.0.me201106292137)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:19.052
+!MESSAGE To: bundle org.jboss.tools.jst.web.ui 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:47:19.052
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:19.052
+!MESSAGE From: MyEclipse JSP Debug Tooling 9.0.0.me201009171018 (com.genuitec.eclipse.wdt.jsp.debug 9.0.0.me201009171018)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:19.052
+!MESSAGE To: bundle com.genuitec.eclipse.j2eedt.core 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:47:19.052
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:19.052
+!MESSAGE From: MyEclipse JSP Debug Tooling 9.0.0.me201012090051 (com.genuitec.eclipse.wdt.jsp.debug 9.0.0.me201012090051)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:19.052
+!MESSAGE To: bundle com.genuitec.eclipse.j2eedt.core 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:47:19.052
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:19.052
+!MESSAGE From: MyEclipse JSP Debug Tooling 9.0.0.me201105051700 (com.genuitec.eclipse.wdt.jsp.debug 9.0.0.me201105051700)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:19.052
+!MESSAGE To: bundle com.genuitec.eclipse.j2eedt.core 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:47:19.052
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:19.052
+!MESSAGE From: Resin Support for MyEclipse 9.1.0.me201106292137 (com.genuitec.myeclipse.resin.feature.group 9.1.0.me201106292137)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:19.052
+!MESSAGE To: com.genuitec.eclipse.easie.resin [9.0.0.me201105301859]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:47:19.052
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:19.053
+!MESSAGE From: Web XML Editors Support for MyEclipse 2.0.0.me201009141935 (org.jboss.tools.jst.web.ui 2.0.0.me201009141935)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:19.053
+!MESSAGE To: bundle org.jboss.tools.jst.jsp 2.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:47:19.053
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:19.053
+!MESSAGE From: Web XML Editors Support for MyEclipse 2.0.0.me201012090051 (org.jboss.tools.jst.web.ui 2.0.0.me201012090051)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:19.053
+!MESSAGE To: bundle org.jboss.tools.jst.jsp 2.0.0
+
+!ENTRY org.eclipse.equinox.p2.operations 4 0 2014-04-07 21:47:44.375
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:47:44.375
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:44.375
+!MESSAGE Software being installed: Resin Support for MyEclipse 9.1.0.me201106292137 (com.genuitec.myeclipse.resin.feature.group 9.1.0.me201106292137)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:44.375
+!MESSAGE Missing requirement: Auxiliary JSP Editor Support for MyEclipse 2.0.0.me201010052030 (org.jboss.tools.jst.jsp 2.0.0.me201010052030) requires 'bundle org.eclipse.help.appserver 0.0.0' but it could not be found
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:44.375
+!MESSAGE Missing requirement: Auxiliary JSP Editor Support for MyEclipse 2.0.0.me201012090051 (org.jboss.tools.jst.jsp 2.0.0.me201012090051) requires 'bundle org.eclipse.help.appserver 0.0.0' but it could not be found
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:47:44.375
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:44.375
+!MESSAGE From: MyEclipse EASIE Resin 9.0.0.me201105301859 (com.genuitec.eclipse.easie.resin 9.0.0.me201105301859)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:44.375
+!MESSAGE To: bundle com.genuitec.eclipse.wdt.jsp.debug 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:47:44.375
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:44.375
+!MESSAGE From: MyEclipse Java Enterprise Development Tooling 9.0.0.me201009231754 (com.genuitec.eclipse.j2eedt.core 9.0.0.me201009231754)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:44.375
+!MESSAGE To: bundle org.jboss.tools.jst.web.ui 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:47:44.375
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:44.375
+!MESSAGE From: MyEclipse Java Enterprise Development Tooling 9.0.0.me201101251749 (com.genuitec.eclipse.j2eedt.core 9.0.0.me201101251749)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:44.375
+!MESSAGE To: bundle org.jboss.tools.jst.web.ui 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:47:44.375
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:44.375
+!MESSAGE From: MyEclipse Java Enterprise Development Tooling 9.0.0.me201102091112 (com.genuitec.eclipse.j2eedt.core 9.0.0.me201102091112)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:44.375
+!MESSAGE To: bundle org.jboss.tools.jst.web.ui 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:47:44.375
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:44.375
+!MESSAGE From: MyEclipse Java Enterprise Development Tooling 9.0.0.me201103181703 (com.genuitec.eclipse.j2eedt.core 9.0.0.me201103181703)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:44.375
+!MESSAGE To: bundle org.jboss.tools.jst.web.ui 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:47:44.376
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:44.376
+!MESSAGE From: MyEclipse Java Enterprise Development Tooling 9.0.0.me201106292137 (com.genuitec.eclipse.j2eedt.core 9.0.0.me201106292137)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:44.376
+!MESSAGE To: bundle org.jboss.tools.jst.web.ui 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:47:44.376
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:44.376
+!MESSAGE From: MyEclipse JSP Debug Tooling 9.0.0.me201009171018 (com.genuitec.eclipse.wdt.jsp.debug 9.0.0.me201009171018)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:44.376
+!MESSAGE To: bundle com.genuitec.eclipse.j2eedt.core 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:47:44.376
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:44.376
+!MESSAGE From: MyEclipse JSP Debug Tooling 9.0.0.me201012090051 (com.genuitec.eclipse.wdt.jsp.debug 9.0.0.me201012090051)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:44.376
+!MESSAGE To: bundle com.genuitec.eclipse.j2eedt.core 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:47:44.376
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:44.376
+!MESSAGE From: MyEclipse JSP Debug Tooling 9.0.0.me201105051700 (com.genuitec.eclipse.wdt.jsp.debug 9.0.0.me201105051700)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:44.376
+!MESSAGE To: bundle com.genuitec.eclipse.j2eedt.core 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:47:44.376
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:44.376
+!MESSAGE From: Resin Support for MyEclipse 9.1.0.me201106292137 (com.genuitec.myeclipse.resin.feature.group 9.1.0.me201106292137)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:44.376
+!MESSAGE To: com.genuitec.eclipse.easie.resin [9.0.0.me201105301859]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:47:44.376
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:44.376
+!MESSAGE From: Web XML Editors Support for MyEclipse 2.0.0.me201009141935 (org.jboss.tools.jst.web.ui 2.0.0.me201009141935)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:44.376
+!MESSAGE To: bundle org.jboss.tools.jst.jsp 2.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:47:44.376
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:44.376
+!MESSAGE From: Web XML Editors Support for MyEclipse 2.0.0.me201012090051 (org.jboss.tools.jst.web.ui 2.0.0.me201012090051)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:44.376
+!MESSAGE To: bundle org.jboss.tools.jst.jsp 2.0.0
+
+!ENTRY org.eclipse.equinox.p2.operations 4 0 2014-04-07 21:47:44.393
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:47:44.393
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:44.393
+!MESSAGE Software being installed: Resin Support for MyEclipse 9.1.0.me201106292137 (com.genuitec.myeclipse.resin.feature.group 9.1.0.me201106292137)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:44.393
+!MESSAGE Missing requirement: Auxiliary JSP Editor Support for MyEclipse 2.0.0.me201010052030 (org.jboss.tools.jst.jsp 2.0.0.me201010052030) requires 'bundle org.eclipse.help.appserver 0.0.0' but it could not be found
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:44.393
+!MESSAGE Missing requirement: Auxiliary JSP Editor Support for MyEclipse 2.0.0.me201012090051 (org.jboss.tools.jst.jsp 2.0.0.me201012090051) requires 'bundle org.eclipse.help.appserver 0.0.0' but it could not be found
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:47:44.393
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:44.393
+!MESSAGE From: MyEclipse EASIE Resin 9.0.0.me201105301859 (com.genuitec.eclipse.easie.resin 9.0.0.me201105301859)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:44.393
+!MESSAGE To: bundle com.genuitec.eclipse.wdt.jsp.debug 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:47:44.393
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:44.393
+!MESSAGE From: MyEclipse Java Enterprise Development Tooling 9.0.0.me201009231754 (com.genuitec.eclipse.j2eedt.core 9.0.0.me201009231754)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:44.393
+!MESSAGE To: bundle org.jboss.tools.jst.web.ui 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:47:44.393
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:44.393
+!MESSAGE From: MyEclipse Java Enterprise Development Tooling 9.0.0.me201101251749 (com.genuitec.eclipse.j2eedt.core 9.0.0.me201101251749)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:44.393
+!MESSAGE To: bundle org.jboss.tools.jst.web.ui 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:47:44.393
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:44.394
+!MESSAGE From: MyEclipse Java Enterprise Development Tooling 9.0.0.me201102091112 (com.genuitec.eclipse.j2eedt.core 9.0.0.me201102091112)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:44.394
+!MESSAGE To: bundle org.jboss.tools.jst.web.ui 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:47:44.394
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:44.394
+!MESSAGE From: MyEclipse Java Enterprise Development Tooling 9.0.0.me201103181703 (com.genuitec.eclipse.j2eedt.core 9.0.0.me201103181703)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:44.394
+!MESSAGE To: bundle org.jboss.tools.jst.web.ui 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:47:44.394
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:44.394
+!MESSAGE From: MyEclipse Java Enterprise Development Tooling 9.0.0.me201106292137 (com.genuitec.eclipse.j2eedt.core 9.0.0.me201106292137)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:44.394
+!MESSAGE To: bundle org.jboss.tools.jst.web.ui 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:47:44.394
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:44.394
+!MESSAGE From: MyEclipse JSP Debug Tooling 9.0.0.me201009171018 (com.genuitec.eclipse.wdt.jsp.debug 9.0.0.me201009171018)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:44.394
+!MESSAGE To: bundle com.genuitec.eclipse.j2eedt.core 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:47:44.394
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:44.394
+!MESSAGE From: MyEclipse JSP Debug Tooling 9.0.0.me201012090051 (com.genuitec.eclipse.wdt.jsp.debug 9.0.0.me201012090051)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:44.394
+!MESSAGE To: bundle com.genuitec.eclipse.j2eedt.core 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:47:44.394
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:44.394
+!MESSAGE From: MyEclipse JSP Debug Tooling 9.0.0.me201105051700 (com.genuitec.eclipse.wdt.jsp.debug 9.0.0.me201105051700)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:44.394
+!MESSAGE To: bundle com.genuitec.eclipse.j2eedt.core 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:47:44.394
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:44.394
+!MESSAGE From: Resin Support for MyEclipse 9.1.0.me201106292137 (com.genuitec.myeclipse.resin.feature.group 9.1.0.me201106292137)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:44.394
+!MESSAGE To: com.genuitec.eclipse.easie.resin [9.0.0.me201105301859]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:47:44.394
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:44.394
+!MESSAGE From: Web XML Editors Support for MyEclipse 2.0.0.me201009141935 (org.jboss.tools.jst.web.ui 2.0.0.me201009141935)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:44.394
+!MESSAGE To: bundle org.jboss.tools.jst.jsp 2.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:47:44.394
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:44.394
+!MESSAGE From: Web XML Editors Support for MyEclipse 2.0.0.me201012090051 (org.jboss.tools.jst.web.ui 2.0.0.me201012090051)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:47:44.394
+!MESSAGE To: bundle org.jboss.tools.jst.jsp 2.0.0
+
+!ENTRY org.eclipse.equinox.p2.operations 4 0 2014-04-07 21:50:56.126
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:50:56.126
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:50:56.126
+!MESSAGE Software being installed: Resin Support for MyEclipse 9.1.0.me201106292137 (com.genuitec.myeclipse.resin.feature.group 9.1.0.me201106292137)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:50:56.126
+!MESSAGE Missing requirement: Auxiliary JSP Editor Support for MyEclipse 2.0.0.me201010052030 (org.jboss.tools.jst.jsp 2.0.0.me201010052030) requires 'bundle org.eclipse.help.appserver 0.0.0' but it could not be found
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:50:56.126
+!MESSAGE Missing requirement: Auxiliary JSP Editor Support for MyEclipse 2.0.0.me201012090051 (org.jboss.tools.jst.jsp 2.0.0.me201012090051) requires 'bundle org.eclipse.help.appserver 0.0.0' but it could not be found
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:50:56.126
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:50:56.126
+!MESSAGE From: MyEclipse EASIE Resin 9.0.0.me201105301859 (com.genuitec.eclipse.easie.resin 9.0.0.me201105301859)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:50:56.126
+!MESSAGE To: bundle com.genuitec.eclipse.wdt.jsp.debug 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:50:56.126
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:50:56.126
+!MESSAGE From: MyEclipse Java Enterprise Development Tooling 9.0.0.me201009231754 (com.genuitec.eclipse.j2eedt.core 9.0.0.me201009231754)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:50:56.126
+!MESSAGE To: bundle org.jboss.tools.jst.web.ui 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:50:56.126
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:50:56.126
+!MESSAGE From: MyEclipse Java Enterprise Development Tooling 9.0.0.me201101251749 (com.genuitec.eclipse.j2eedt.core 9.0.0.me201101251749)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:50:56.126
+!MESSAGE To: bundle org.jboss.tools.jst.web.ui 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:50:56.126
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:50:56.126
+!MESSAGE From: MyEclipse Java Enterprise Development Tooling 9.0.0.me201102091112 (com.genuitec.eclipse.j2eedt.core 9.0.0.me201102091112)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:50:56.126
+!MESSAGE To: bundle org.jboss.tools.jst.web.ui 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:50:56.126
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:50:56.126
+!MESSAGE From: MyEclipse Java Enterprise Development Tooling 9.0.0.me201103181703 (com.genuitec.eclipse.j2eedt.core 9.0.0.me201103181703)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:50:56.126
+!MESSAGE To: bundle org.jboss.tools.jst.web.ui 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:50:56.126
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:50:56.126
+!MESSAGE From: MyEclipse Java Enterprise Development Tooling 9.0.0.me201106292137 (com.genuitec.eclipse.j2eedt.core 9.0.0.me201106292137)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:50:56.126
+!MESSAGE To: bundle org.jboss.tools.jst.web.ui 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:50:56.127
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:50:56.127
+!MESSAGE From: MyEclipse JSP Debug Tooling 9.0.0.me201009171018 (com.genuitec.eclipse.wdt.jsp.debug 9.0.0.me201009171018)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:50:56.127
+!MESSAGE To: bundle com.genuitec.eclipse.j2eedt.core 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:50:56.127
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:50:56.127
+!MESSAGE From: MyEclipse JSP Debug Tooling 9.0.0.me201012090051 (com.genuitec.eclipse.wdt.jsp.debug 9.0.0.me201012090051)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:50:56.127
+!MESSAGE To: bundle com.genuitec.eclipse.j2eedt.core 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:50:56.127
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:50:56.127
+!MESSAGE From: MyEclipse JSP Debug Tooling 9.0.0.me201105051700 (com.genuitec.eclipse.wdt.jsp.debug 9.0.0.me201105051700)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:50:56.127
+!MESSAGE To: bundle com.genuitec.eclipse.j2eedt.core 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:50:56.127
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:50:56.127
+!MESSAGE From: Resin Support for MyEclipse 9.1.0.me201106292137 (com.genuitec.myeclipse.resin.feature.group 9.1.0.me201106292137)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:50:56.127
+!MESSAGE To: com.genuitec.eclipse.easie.resin [9.0.0.me201105301859]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:50:56.127
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:50:56.127
+!MESSAGE From: Web XML Editors Support for MyEclipse 2.0.0.me201009141935 (org.jboss.tools.jst.web.ui 2.0.0.me201009141935)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:50:56.127
+!MESSAGE To: bundle org.jboss.tools.jst.jsp 2.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:50:56.127
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:50:56.127
+!MESSAGE From: Web XML Editors Support for MyEclipse 2.0.0.me201012090051 (org.jboss.tools.jst.web.ui 2.0.0.me201012090051)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:50:56.127
+!MESSAGE To: bundle org.jboss.tools.jst.jsp 2.0.0
+
+!ENTRY org.eclipse.equinox.p2.operations 4 0 2014-04-07 21:50:56.199
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:50:56.199
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:50:56.199
+!MESSAGE Software being installed: Resin Support for MyEclipse 9.1.0.me201106292137 (com.genuitec.myeclipse.resin.feature.group 9.1.0.me201106292137)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:50:56.199
+!MESSAGE Missing requirement: Auxiliary JSP Editor Support for MyEclipse 2.0.0.me201010052030 (org.jboss.tools.jst.jsp 2.0.0.me201010052030) requires 'bundle org.eclipse.help.appserver 0.0.0' but it could not be found
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:50:56.199
+!MESSAGE Missing requirement: Auxiliary JSP Editor Support for MyEclipse 2.0.0.me201012090051 (org.jboss.tools.jst.jsp 2.0.0.me201012090051) requires 'bundle org.eclipse.help.appserver 0.0.0' but it could not be found
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:50:56.200
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:50:56.200
+!MESSAGE From: MyEclipse EASIE Resin 9.0.0.me201105301859 (com.genuitec.eclipse.easie.resin 9.0.0.me201105301859)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:50:56.200
+!MESSAGE To: bundle com.genuitec.eclipse.wdt.jsp.debug 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:50:56.200
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:50:56.200
+!MESSAGE From: MyEclipse Java Enterprise Development Tooling 9.0.0.me201009231754 (com.genuitec.eclipse.j2eedt.core 9.0.0.me201009231754)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:50:56.200
+!MESSAGE To: bundle org.jboss.tools.jst.web.ui 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:50:56.200
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:50:56.200
+!MESSAGE From: MyEclipse Java Enterprise Development Tooling 9.0.0.me201101251749 (com.genuitec.eclipse.j2eedt.core 9.0.0.me201101251749)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:50:56.200
+!MESSAGE To: bundle org.jboss.tools.jst.web.ui 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:50:56.200
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:50:56.200
+!MESSAGE From: MyEclipse Java Enterprise Development Tooling 9.0.0.me201102091112 (com.genuitec.eclipse.j2eedt.core 9.0.0.me201102091112)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:50:56.200
+!MESSAGE To: bundle org.jboss.tools.jst.web.ui 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:50:56.200
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:50:56.200
+!MESSAGE From: MyEclipse Java Enterprise Development Tooling 9.0.0.me201103181703 (com.genuitec.eclipse.j2eedt.core 9.0.0.me201103181703)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:50:56.200
+!MESSAGE To: bundle org.jboss.tools.jst.web.ui 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:50:56.200
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:50:56.200
+!MESSAGE From: MyEclipse Java Enterprise Development Tooling 9.0.0.me201106292137 (com.genuitec.eclipse.j2eedt.core 9.0.0.me201106292137)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:50:56.200
+!MESSAGE To: bundle org.jboss.tools.jst.web.ui 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:50:56.200
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:50:56.200
+!MESSAGE From: MyEclipse JSP Debug Tooling 9.0.0.me201009171018 (com.genuitec.eclipse.wdt.jsp.debug 9.0.0.me201009171018)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:50:56.200
+!MESSAGE To: bundle com.genuitec.eclipse.j2eedt.core 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:50:56.200
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:50:56.200
+!MESSAGE From: MyEclipse JSP Debug Tooling 9.0.0.me201012090051 (com.genuitec.eclipse.wdt.jsp.debug 9.0.0.me201012090051)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:50:56.200
+!MESSAGE To: bundle com.genuitec.eclipse.j2eedt.core 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:50:56.200
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:50:56.200
+!MESSAGE From: MyEclipse JSP Debug Tooling 9.0.0.me201105051700 (com.genuitec.eclipse.wdt.jsp.debug 9.0.0.me201105051700)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:50:56.201
+!MESSAGE To: bundle com.genuitec.eclipse.j2eedt.core 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:50:56.201
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:50:56.201
+!MESSAGE From: Resin Support for MyEclipse 9.1.0.me201106292137 (com.genuitec.myeclipse.resin.feature.group 9.1.0.me201106292137)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:50:56.201
+!MESSAGE To: com.genuitec.eclipse.easie.resin [9.0.0.me201105301859]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:50:56.201
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:50:56.201
+!MESSAGE From: Web XML Editors Support for MyEclipse 2.0.0.me201009141935 (org.jboss.tools.jst.web.ui 2.0.0.me201009141935)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:50:56.201
+!MESSAGE To: bundle org.jboss.tools.jst.jsp 2.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:50:56.201
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:50:56.201
+!MESSAGE From: Web XML Editors Support for MyEclipse 2.0.0.me201012090051 (org.jboss.tools.jst.web.ui 2.0.0.me201012090051)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:50:56.201
+!MESSAGE To: bundle org.jboss.tools.jst.jsp 2.0.0
+
+!ENTRY org.eclipse.equinox.p2.operations 4 0 2014-04-07 21:51:18.907
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:51:18.907
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:18.907
+!MESSAGE Software being installed: Resin Support for MyEclipse 9.1.0.me201106292137 (com.genuitec.myeclipse.resin.feature.group 9.1.0.me201106292137)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:18.907
+!MESSAGE Missing requirement: Auxiliary JSP Editor Support for MyEclipse 2.0.0.me201010052030 (org.jboss.tools.jst.jsp 2.0.0.me201010052030) requires 'bundle org.eclipse.help.appserver 0.0.0' but it could not be found
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:18.907
+!MESSAGE Missing requirement: Auxiliary JSP Editor Support for MyEclipse 2.0.0.me201012090051 (org.jboss.tools.jst.jsp 2.0.0.me201012090051) requires 'bundle org.eclipse.help.appserver 0.0.0' but it could not be found
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:51:18.907
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:18.907
+!MESSAGE From: MyEclipse EASIE Resin 9.0.0.me201105301859 (com.genuitec.eclipse.easie.resin 9.0.0.me201105301859)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:18.907
+!MESSAGE To: bundle com.genuitec.eclipse.wdt.jsp.debug 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:51:18.907
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:18.907
+!MESSAGE From: MyEclipse Java Enterprise Development Tooling 9.0.0.me201009231754 (com.genuitec.eclipse.j2eedt.core 9.0.0.me201009231754)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:18.907
+!MESSAGE To: bundle org.jboss.tools.jst.web.ui 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:51:18.907
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:18.907
+!MESSAGE From: MyEclipse Java Enterprise Development Tooling 9.0.0.me201101251749 (com.genuitec.eclipse.j2eedt.core 9.0.0.me201101251749)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:18.908
+!MESSAGE To: bundle org.jboss.tools.jst.web.ui 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:51:18.908
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:18.908
+!MESSAGE From: MyEclipse Java Enterprise Development Tooling 9.0.0.me201102091112 (com.genuitec.eclipse.j2eedt.core 9.0.0.me201102091112)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:18.908
+!MESSAGE To: bundle org.jboss.tools.jst.web.ui 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:51:18.908
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:18.908
+!MESSAGE From: MyEclipse Java Enterprise Development Tooling 9.0.0.me201103181703 (com.genuitec.eclipse.j2eedt.core 9.0.0.me201103181703)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:18.908
+!MESSAGE To: bundle org.jboss.tools.jst.web.ui 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:51:18.908
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:18.908
+!MESSAGE From: MyEclipse Java Enterprise Development Tooling 9.0.0.me201106292137 (com.genuitec.eclipse.j2eedt.core 9.0.0.me201106292137)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:18.908
+!MESSAGE To: bundle org.jboss.tools.jst.web.ui 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:51:18.908
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:18.908
+!MESSAGE From: MyEclipse JSP Debug Tooling 9.0.0.me201009171018 (com.genuitec.eclipse.wdt.jsp.debug 9.0.0.me201009171018)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:18.908
+!MESSAGE To: bundle com.genuitec.eclipse.j2eedt.core 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:51:18.908
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:18.908
+!MESSAGE From: MyEclipse JSP Debug Tooling 9.0.0.me201012090051 (com.genuitec.eclipse.wdt.jsp.debug 9.0.0.me201012090051)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:18.908
+!MESSAGE To: bundle com.genuitec.eclipse.j2eedt.core 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:51:18.908
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:18.908
+!MESSAGE From: MyEclipse JSP Debug Tooling 9.0.0.me201105051700 (com.genuitec.eclipse.wdt.jsp.debug 9.0.0.me201105051700)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:18.908
+!MESSAGE To: bundle com.genuitec.eclipse.j2eedt.core 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:51:18.908
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:18.908
+!MESSAGE From: Resin Support for MyEclipse 9.1.0.me201106292137 (com.genuitec.myeclipse.resin.feature.group 9.1.0.me201106292137)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:18.908
+!MESSAGE To: com.genuitec.eclipse.easie.resin [9.0.0.me201105301859]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:51:18.908
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:18.908
+!MESSAGE From: Web XML Editors Support for MyEclipse 2.0.0.me201009141935 (org.jboss.tools.jst.web.ui 2.0.0.me201009141935)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:18.908
+!MESSAGE To: bundle org.jboss.tools.jst.jsp 2.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:51:18.908
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:18.908
+!MESSAGE From: Web XML Editors Support for MyEclipse 2.0.0.me201012090051 (org.jboss.tools.jst.web.ui 2.0.0.me201012090051)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:18.908
+!MESSAGE To: bundle org.jboss.tools.jst.jsp 2.0.0
+
+!ENTRY org.eclipse.equinox.p2.operations 4 0 2014-04-07 21:51:18.915
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:51:18.916
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:18.916
+!MESSAGE Software being installed: Resin Support for MyEclipse 9.1.0.me201106292137 (com.genuitec.myeclipse.resin.feature.group 9.1.0.me201106292137)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:18.916
+!MESSAGE Missing requirement: Auxiliary JSP Editor Support for MyEclipse 2.0.0.me201010052030 (org.jboss.tools.jst.jsp 2.0.0.me201010052030) requires 'bundle org.eclipse.help.appserver 0.0.0' but it could not be found
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:18.916
+!MESSAGE Missing requirement: Auxiliary JSP Editor Support for MyEclipse 2.0.0.me201012090051 (org.jboss.tools.jst.jsp 2.0.0.me201012090051) requires 'bundle org.eclipse.help.appserver 0.0.0' but it could not be found
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:51:18.916
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:18.916
+!MESSAGE From: MyEclipse EASIE Resin 9.0.0.me201105301859 (com.genuitec.eclipse.easie.resin 9.0.0.me201105301859)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:18.916
+!MESSAGE To: bundle com.genuitec.eclipse.wdt.jsp.debug 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:51:18.916
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:18.916
+!MESSAGE From: MyEclipse Java Enterprise Development Tooling 9.0.0.me201009231754 (com.genuitec.eclipse.j2eedt.core 9.0.0.me201009231754)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:18.916
+!MESSAGE To: bundle org.jboss.tools.jst.web.ui 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:51:18.916
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:18.916
+!MESSAGE From: MyEclipse Java Enterprise Development Tooling 9.0.0.me201101251749 (com.genuitec.eclipse.j2eedt.core 9.0.0.me201101251749)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:18.916
+!MESSAGE To: bundle org.jboss.tools.jst.web.ui 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:51:18.916
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:18.916
+!MESSAGE From: MyEclipse Java Enterprise Development Tooling 9.0.0.me201102091112 (com.genuitec.eclipse.j2eedt.core 9.0.0.me201102091112)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:18.916
+!MESSAGE To: bundle org.jboss.tools.jst.web.ui 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:51:18.916
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:18.916
+!MESSAGE From: MyEclipse Java Enterprise Development Tooling 9.0.0.me201103181703 (com.genuitec.eclipse.j2eedt.core 9.0.0.me201103181703)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:18.916
+!MESSAGE To: bundle org.jboss.tools.jst.web.ui 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:51:18.916
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:18.916
+!MESSAGE From: MyEclipse Java Enterprise Development Tooling 9.0.0.me201106292137 (com.genuitec.eclipse.j2eedt.core 9.0.0.me201106292137)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:18.916
+!MESSAGE To: bundle org.jboss.tools.jst.web.ui 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:51:18.916
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:18.916
+!MESSAGE From: MyEclipse JSP Debug Tooling 9.0.0.me201009171018 (com.genuitec.eclipse.wdt.jsp.debug 9.0.0.me201009171018)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:18.916
+!MESSAGE To: bundle com.genuitec.eclipse.j2eedt.core 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:51:18.916
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:18.916
+!MESSAGE From: MyEclipse JSP Debug Tooling 9.0.0.me201012090051 (com.genuitec.eclipse.wdt.jsp.debug 9.0.0.me201012090051)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:18.916
+!MESSAGE To: bundle com.genuitec.eclipse.j2eedt.core 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:51:18.916
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:18.916
+!MESSAGE From: MyEclipse JSP Debug Tooling 9.0.0.me201105051700 (com.genuitec.eclipse.wdt.jsp.debug 9.0.0.me201105051700)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:18.917
+!MESSAGE To: bundle com.genuitec.eclipse.j2eedt.core 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:51:18.917
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:18.917
+!MESSAGE From: Resin Support for MyEclipse 9.1.0.me201106292137 (com.genuitec.myeclipse.resin.feature.group 9.1.0.me201106292137)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:18.917
+!MESSAGE To: com.genuitec.eclipse.easie.resin [9.0.0.me201105301859]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:51:18.917
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:18.917
+!MESSAGE From: Web XML Editors Support for MyEclipse 2.0.0.me201009141935 (org.jboss.tools.jst.web.ui 2.0.0.me201009141935)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:18.917
+!MESSAGE To: bundle org.jboss.tools.jst.jsp 2.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:51:18.917
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:18.917
+!MESSAGE From: Web XML Editors Support for MyEclipse 2.0.0.me201012090051 (org.jboss.tools.jst.web.ui 2.0.0.me201012090051)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:18.917
+!MESSAGE To: bundle org.jboss.tools.jst.jsp 2.0.0
+
+!ENTRY org.eclipse.equinox.p2.operations 4 0 2014-04-07 21:51:28.290
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:51:28.290
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:28.290
+!MESSAGE Software being installed: JOnAS Support for MyEclipse 9.1.0.me201106292137 (com.genuitec.myeclipse.jonas.feature.group 9.1.0.me201106292137)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:28.290
+!MESSAGE Missing requirement: Auxiliary JSP Editor Support for MyEclipse 2.0.0.me201010052030 (org.jboss.tools.jst.jsp 2.0.0.me201010052030) requires 'bundle org.eclipse.help.appserver 0.0.0' but it could not be found
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:28.290
+!MESSAGE Missing requirement: Auxiliary JSP Editor Support for MyEclipse 2.0.0.me201012090051 (org.jboss.tools.jst.jsp 2.0.0.me201012090051) requires 'bundle org.eclipse.help.appserver 0.0.0' but it could not be found
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:51:28.290
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:28.290
+!MESSAGE From: MyEclipse EASIE JOnAS 9.0.0.me201105051700 (com.genuitec.eclipse.easie.jonas 9.0.0.me201105051700)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:28.290
+!MESSAGE To: bundle com.genuitec.eclipse.wdt.jsp.debug 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:51:28.290
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:28.290
+!MESSAGE From: MyEclipse Java Enterprise Development Tooling 9.0.0.me201009231754 (com.genuitec.eclipse.j2eedt.core 9.0.0.me201009231754)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:28.290
+!MESSAGE To: bundle org.jboss.tools.jst.web.ui 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:51:28.290
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:28.290
+!MESSAGE From: MyEclipse Java Enterprise Development Tooling 9.0.0.me201101251749 (com.genuitec.eclipse.j2eedt.core 9.0.0.me201101251749)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:28.291
+!MESSAGE To: bundle org.jboss.tools.jst.web.ui 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:51:28.291
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:28.291
+!MESSAGE From: MyEclipse Java Enterprise Development Tooling 9.0.0.me201102091112 (com.genuitec.eclipse.j2eedt.core 9.0.0.me201102091112)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:28.291
+!MESSAGE To: bundle org.jboss.tools.jst.web.ui 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:51:28.291
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:28.291
+!MESSAGE From: MyEclipse Java Enterprise Development Tooling 9.0.0.me201103181703 (com.genuitec.eclipse.j2eedt.core 9.0.0.me201103181703)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:28.291
+!MESSAGE To: bundle org.jboss.tools.jst.web.ui 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:51:28.291
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:28.291
+!MESSAGE From: MyEclipse Java Enterprise Development Tooling 9.0.0.me201106292137 (com.genuitec.eclipse.j2eedt.core 9.0.0.me201106292137)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:28.291
+!MESSAGE To: bundle org.jboss.tools.jst.web.ui 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:51:28.291
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:28.291
+!MESSAGE From: MyEclipse JSP Debug Tooling 9.0.0.me201009171018 (com.genuitec.eclipse.wdt.jsp.debug 9.0.0.me201009171018)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:28.291
+!MESSAGE To: bundle com.genuitec.eclipse.j2eedt.core 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:51:28.291
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:28.291
+!MESSAGE From: MyEclipse JSP Debug Tooling 9.0.0.me201012090051 (com.genuitec.eclipse.wdt.jsp.debug 9.0.0.me201012090051)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:28.291
+!MESSAGE To: bundle com.genuitec.eclipse.j2eedt.core 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:51:28.291
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:28.291
+!MESSAGE From: MyEclipse JSP Debug Tooling 9.0.0.me201105051700 (com.genuitec.eclipse.wdt.jsp.debug 9.0.0.me201105051700)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:28.291
+!MESSAGE To: bundle com.genuitec.eclipse.j2eedt.core 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:51:28.291
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:28.291
+!MESSAGE From: JOnAS Support for MyEclipse 9.1.0.me201106292137 (com.genuitec.myeclipse.jonas.feature.group 9.1.0.me201106292137)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:28.291
+!MESSAGE To: com.genuitec.eclipse.easie.jonas [9.0.0.me201105051700]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:51:28.291
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:28.291
+!MESSAGE From: Web XML Editors Support for MyEclipse 2.0.0.me201009141935 (org.jboss.tools.jst.web.ui 2.0.0.me201009141935)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:28.291
+!MESSAGE To: bundle org.jboss.tools.jst.jsp 2.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:51:28.291
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:28.291
+!MESSAGE From: Web XML Editors Support for MyEclipse 2.0.0.me201012090051 (org.jboss.tools.jst.web.ui 2.0.0.me201012090051)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:28.291
+!MESSAGE To: bundle org.jboss.tools.jst.jsp 2.0.0
+
+!ENTRY org.eclipse.equinox.p2.operations 4 0 2014-04-07 21:51:28.296
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:51:28.296
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:28.296
+!MESSAGE Software being installed: JOnAS Support for MyEclipse 9.1.0.me201106292137 (com.genuitec.myeclipse.jonas.feature.group 9.1.0.me201106292137)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:28.296
+!MESSAGE Missing requirement: Auxiliary JSP Editor Support for MyEclipse 2.0.0.me201010052030 (org.jboss.tools.jst.jsp 2.0.0.me201010052030) requires 'bundle org.eclipse.help.appserver 0.0.0' but it could not be found
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:28.296
+!MESSAGE Missing requirement: Auxiliary JSP Editor Support for MyEclipse 2.0.0.me201012090051 (org.jboss.tools.jst.jsp 2.0.0.me201012090051) requires 'bundle org.eclipse.help.appserver 0.0.0' but it could not be found
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:51:28.296
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:28.296
+!MESSAGE From: MyEclipse EASIE JOnAS 9.0.0.me201105051700 (com.genuitec.eclipse.easie.jonas 9.0.0.me201105051700)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:28.296
+!MESSAGE To: bundle com.genuitec.eclipse.wdt.jsp.debug 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:51:28.297
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:28.297
+!MESSAGE From: MyEclipse Java Enterprise Development Tooling 9.0.0.me201009231754 (com.genuitec.eclipse.j2eedt.core 9.0.0.me201009231754)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:28.297
+!MESSAGE To: bundle org.jboss.tools.jst.web.ui 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:51:28.297
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:28.297
+!MESSAGE From: MyEclipse Java Enterprise Development Tooling 9.0.0.me201101251749 (com.genuitec.eclipse.j2eedt.core 9.0.0.me201101251749)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:28.297
+!MESSAGE To: bundle org.jboss.tools.jst.web.ui 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:51:28.297
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:28.297
+!MESSAGE From: MyEclipse Java Enterprise Development Tooling 9.0.0.me201102091112 (com.genuitec.eclipse.j2eedt.core 9.0.0.me201102091112)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:28.297
+!MESSAGE To: bundle org.jboss.tools.jst.web.ui 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:51:28.297
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:28.297
+!MESSAGE From: MyEclipse Java Enterprise Development Tooling 9.0.0.me201103181703 (com.genuitec.eclipse.j2eedt.core 9.0.0.me201103181703)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:28.297
+!MESSAGE To: bundle org.jboss.tools.jst.web.ui 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:51:28.297
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:28.297
+!MESSAGE From: MyEclipse Java Enterprise Development Tooling 9.0.0.me201106292137 (com.genuitec.eclipse.j2eedt.core 9.0.0.me201106292137)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:28.297
+!MESSAGE To: bundle org.jboss.tools.jst.web.ui 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:51:28.297
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:28.297
+!MESSAGE From: MyEclipse JSP Debug Tooling 9.0.0.me201009171018 (com.genuitec.eclipse.wdt.jsp.debug 9.0.0.me201009171018)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:28.297
+!MESSAGE To: bundle com.genuitec.eclipse.j2eedt.core 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:51:28.297
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:28.297
+!MESSAGE From: MyEclipse JSP Debug Tooling 9.0.0.me201012090051 (com.genuitec.eclipse.wdt.jsp.debug 9.0.0.me201012090051)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:28.297
+!MESSAGE To: bundle com.genuitec.eclipse.j2eedt.core 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:51:28.297
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:28.297
+!MESSAGE From: MyEclipse JSP Debug Tooling 9.0.0.me201105051700 (com.genuitec.eclipse.wdt.jsp.debug 9.0.0.me201105051700)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:28.297
+!MESSAGE To: bundle com.genuitec.eclipse.j2eedt.core 0.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:51:28.297
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:28.297
+!MESSAGE From: JOnAS Support for MyEclipse 9.1.0.me201106292137 (com.genuitec.myeclipse.jonas.feature.group 9.1.0.me201106292137)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:28.297
+!MESSAGE To: com.genuitec.eclipse.easie.jonas [9.0.0.me201105051700]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:51:28.297
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:28.297
+!MESSAGE From: Web XML Editors Support for MyEclipse 2.0.0.me201009141935 (org.jboss.tools.jst.web.ui 2.0.0.me201009141935)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:28.297
+!MESSAGE To: bundle org.jboss.tools.jst.jsp 2.0.0
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2014-04-07 21:51:28.297
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:28.297
+!MESSAGE From: Web XML Editors Support for MyEclipse 2.0.0.me201012090051 (org.jboss.tools.jst.web.ui 2.0.0.me201012090051)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2014-04-07 21:51:28.297
+!MESSAGE To: bundle org.jboss.tools.jst.jsp 2.0.0
