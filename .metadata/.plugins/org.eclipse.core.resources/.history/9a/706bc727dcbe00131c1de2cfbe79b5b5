@@ -63,7 +63,6 @@ public class IScrapeOpen2Study {
 			String course_fee = "Free";
 			String language = "English";
 			String certificate = "No";
-			String thesite = "open2study";
 			
 			//test query
 			/*
@@ -72,7 +71,7 @@ public class IScrapeOpen2Study {
 			*/
 			
 			String query = "INSERT INTO `MOOCentral`.`coursedata` (`id`, `title`, `short_desc`,`course_link`, `video_link`, `start_date`, `course_length`, `course_image`, `category`, `site`, `profname`, `profimage` )" + 
-					"VALUES(NULL, '" + title + "','" + short_desc + "','" + course_link + "','" + video_link + "','" + start_date + "','" + course_length + "','" + course_image + "','" + category + "','" + thesite + "','" + profname + "','" + profimage + "')";
+					"VALUES(NULL, '" + title + "','" + short_desc + "','" + course_link + "','" + video_link + "','" + start_date + "','" + course_length + "','" + course_image + "','" + category + "','" + site + "','" + profname + "','" + profimage + "')";
 			
 			System.out.println(query);
 			statement.executeUpdate(query);

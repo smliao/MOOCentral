@@ -3,6 +3,8 @@
 	</head>
 
 <body>
+
+	<h1> MOOCentral </h1>
 	<div align="center">
 	<form>
 		<input name="keyword" type="text" placeholder="Search for a course" />
@@ -11,7 +13,8 @@
 	</div>
 
 <?php
-	$con = mysqli_connect("localhost", "root", "", "MOOCentral");
+	$con = mysqli_connect("localhost", "sjsucsor_s2g414s", "abcd#1234", "sjsucsor_160s2g42014s");
+	//$con = mysqli_connect("localhost", "root", "", "MOOCentral");	
 	if(mysqli_connect_errno()){
 		echo "failed to connect to MySQL: " . mysqli_connect_errno();
 	}
@@ -20,14 +23,10 @@
 
 	echo "<table border = '1' 
 		<tr>
-		<th> ID </th>
 		<th> TITLE </th>
-		<th> short_desc </th>
-		<th> course_link </th>
 		<th> start_date </th>
 		<th> course_length </th>
 		<th> course_image </th>
-		<th> category </th>
 		<th> site </th>
 		<th> profname </th>
 		<th> profimage </th>
@@ -35,11 +34,11 @@
 
 	while($row = mysqli_fetch_array($data)){
 		echo "<tr>";
-		echo "<td>" . $row['id'] . "</td>";
+	//	echo "<td>" . $row['id'] . "</td>";
 		echo "<td>" . $row['title'] . "</td>";
-		echo "<td>" . $row['short_desc'] . "</td>";
+	//	echo "<td>" . $row['short_desc'] . "</td>";
 		// echo "<td>" . $row['long_desc'] . "</td>";
-		echo "<td><a href=\"" . $row['course_link'] .  "\" target=\"_blank\">Course Link</a></td>";
+	//	echo "<td><a href=\"" . $row['course_link'] .  "\" target=\"_blank\">Course Link</a></td>";
 		
 		/* removed video for faster loading
 		echo "<td> 
@@ -50,11 +49,11 @@
 
 		echo "<td>" . $row['start_date'] . "</td>";
 		echo "<td>" . $row['course_length'] . "</td>";
-		echo "<td><image src=\"" . $row['course_image'] . "\" alt=\"profimage\" height=\"100\" width=\"100\"></td>";
-		echo "<td>" . $row['category'] . "</td>";
+		echo "<td><a href=\"" . $row['course_link'] . "\" target=\"_blank\"><image src=\"" . $row['course_image'] . "\" alt=\"missing course image\" height=\"100\" width=\"100\"></a></td>";
+	//	echo "<td>" . $row['category'] . "</td>";
 		echo "<td>" . $row['site'] . "</td>";
 		echo "<td>" . $row['profname'] . "</td>";
-		echo "<td><image src=\"" . $row['profimage'] . "\" alt=\"profimage\" height=\"100\" width=\"100\"></td>";
+		echo "<td><image src=\"" . $row['profimage'] . "\" alt=\"missing image\" height=\"100\" width=\"100\"></td>";
 
 		echo "</tr>";
 	}
@@ -63,6 +62,6 @@
 
 
 
-</body>>
+</body>
 
 </html>

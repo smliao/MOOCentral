@@ -17,7 +17,7 @@ public class IScrapeOpen2Study {
 		Document doc = Jsoup.connect(crcsUrl).get();
 		Elements ele = doc.select("div[class*=views-row]");
 		Elements link = ele.select("a[href]");
-	//	System.out.println(link.size());
+		System.out.println(link.size());
 		for (int i = 0; i < link.size(); i++)
 		{
 			String node_id = link.get(i).attr("href");
@@ -59,11 +59,10 @@ public class IScrapeOpen2Study {
 			
 			
 			////// Not available, default values assumed.
-			String course_image = crsdoc.select("img[class=image-style-educator-details-logo]").get(0).attr("src");
+			String course_image = "N/A";
 			String course_fee = "Free";
 			String language = "English";
 			String certificate = "No";
-			String thesite = "open2study";
 			
 			//test query
 			/*
@@ -72,7 +71,7 @@ public class IScrapeOpen2Study {
 			*/
 			
 			String query = "INSERT INTO `MOOCentral`.`coursedata` (`id`, `title`, `short_desc`,`course_link`, `video_link`, `start_date`, `course_length`, `course_image`, `category`, `site`, `profname`, `profimage` )" + 
-					"VALUES(NULL, '" + title + "','" + short_desc + "','" + course_link + "','" + video_link + "','" + start_date + "','" + course_length + "','" + course_image + "','" + category + "','" + thesite + "','" + profname + "','" + profimage + "')";
+					"VALUES(NULL, '" + title + "','" + short_desc + "','" + course_link + "','" + video_link + "','" + start_date + "','" + course_length + "','" + course_image + "','" + category + "','" + site + "','" + profname + "','" + profimage + "')";
 			
 			System.out.println(query);
 			statement.executeUpdate(query);

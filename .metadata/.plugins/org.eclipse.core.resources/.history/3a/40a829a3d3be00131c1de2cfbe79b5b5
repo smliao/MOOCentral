@@ -26,7 +26,7 @@ public class Canvas {
 		pgcrs.add(url);
 		
 		Class.forName("com.mysql.jdbc.Driver").newInstance();
-		java.sql.Connection connection = DriverManager.getConnection("jdbc:mysql://localhost/MOOCentral","root","");
+		java.sql.Connection connection = DriverManager.getConnection("jdbc:mysql://localhost/MOOCentral","root","root");
 		Statement statement = connection.createStatement();
 		
 		
