@@ -3,27 +3,31 @@ import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
 import org.jsoup.nodes.Element;
 import java.sql.*;
-import java.io.IOException;
-import java.util.ArrayList;
+import java.io.*;
+import java.util.*;
+import java.text.*;
 
 public class IScrapeOpen2Study {
-	public static void main(String[] args) throws IOException, InstantiationException, IllegalAccessException, ClassNotFoundException, SQLException {
-		Class.forName("com.mysql.jdbc.Driver").newInstance();
-		java.sql.Connection connection = DriverManager.getConnection("jdbc:mysql://localhost/MOOCentral","root","");
-		Statement statement = connection.createStatement();
+	public static void main(String[] args) throws ParseException, IOException, InstantiationException, IllegalAccessException, ClassNotFoundException, SQLException {
+		//Class.forName("com.mysql.jdbc.Driver").newInstance();
+		//java.sql.Connection connection = DriverManager.getConnection("jdbc:mysql://sjsu-cs.org:22/sjsucsor_160s2g42014s","sjsucsor_s2g414s","abcd#1234");
+		//Statement statement = connection.createStatement();
 		
 		String site = "https://www.open2study.com";
 		String crcsUrl = "https://www.open2study.com/courses";
 		Document doc = Jsoup.connect(crcsUrl).get();
-		Elements ele = doc.select("div[class*=views-row]");
-		Elements link = ele.select("a[href]");
-	//	System.out.println(link.size());
-		for (int i = 0; i < link.size(); i++)
+		Elements ele = doc.select("div[class=views-field views-field-nothing]");
+		//Elements link = ele.select("a[href]");
+		//for (int i = 0; i < link.size(); i++)
+		for (int i = 0; i < ele.size(); i++)
 		{
-			String node_id = link.get(i).attr("href");
+			//String node_id = link.get(i).attr("href");
+			String node_id = ele.select("a[href]").get(i).attr("href");
 			String course_link = site + node_id;
 			
 			String course_id = node_id.replace("/node/", "");
+			
+			String course_image = ele.select("img[class=image-style-course-logo-subjects-block]").get(i).attr("src");
 			
 			////// Visit each course page to scrape corresponding entries.
 			Document crsdoc = Jsoup.connect(course_link).get();
@@ -33,7 +37,6 @@ public class IScrapeOpen2Study {
 			String long_desc_top = crsdoc.select("div[class=summary]").get(0).text();
 			String long_desc_bottom = crsdoc.select("div[class=full-body]").get(0).text();
 			String long_desc = long_desc_top + long_desc_bottom;
-			long_desc = long_desc.replaceAll("'", "''");
 			
 			String video_link = crsdoc.select("iframe").attr("src");
 			
@@ -44,40 +47,48 @@ public class IScrapeOpen2Study {
 
 			String title = crsdoc.select("h1[class=page-title offering_title]").get(0).text();
 			
-			String category = title.split("[\\(\\)]")[1];
+			String category = "N/A";
+			String[] temp = title.split("[\\(\\)]");
+			if(temp.length > 1){
+				category = temp[1];
+			}
 			
 			String university = crsdoc.select("div[id=provider-logo]").get(0).select("a").get(0).attr("href");
 			university = university.replace("/educators/", "");
+			university = university.replace("/", "");
+			university = university.replace("-", " ");
+			String[] arr = university.split(" ");
+			StringBuffer sb = new StringBuffer();
+			for (int loop = 0; loop < arr.length; loop++) {
+				sb.append(Character.toUpperCase(arr[loop].charAt(0))).append(arr[loop].substring(1)).append(" ");
+			}          
+			university = sb.toString().trim();
 			
 			////// TODO: 
 			////// date type needed for start_date in database.
 			////// int type needed for course_length in database.
-			String start_date = crsdoc.select("h2[class=offering_dates_date]").get(0).text();
-			String end_date = crsdoc.select("h2[class=offering_dates_date]").get(1).text();			
-			String course_length = "TODO";
+			String start_date = "00/00/0000";
+			String end_date = "00/00/0000";			
+			String course_length = "-1";
+			Element date_ele = crsdoc.select("h2[class=offering_dates_date]").first();
+			if (date_ele != null){
+				start_date = date_ele.text();
+				end_date = crsdoc.select("h2[class=offering_dates_date]").get(1).text();			
+				
+				java.util.Date date1 = new SimpleDateFormat("dd/MM/yyyy").parse(start_date);
+				java.util.Date date2 = new SimpleDateFormat("dd/MM/yyyy").parse(end_date);
+				long difference = date2.getTime() - date1.getTime(); 
+				int days = (int) (difference / (1000*60*60*24));  
+				course_length = Integer.toString(days / 7) + " weeks";
+			}
 
-			
-			
 			////// Not available, default values assumed.
-			String course_image = crsdoc.select("img[class=image-style-educator-details-logo]").get(0).attr("src");
 			String course_fee = "Free";
 			String language = "English";
 			String certificate = "No";
 			String thesite = "open2study";
 			
-			//test query
-			/*
-			String query = "INSERT INTO `MOOCentral`.`coursedata` (`id`, `title`, `short_desc`, `long_desc`, `course_link`, `video_link`)" + 
-			"VALUES(NULL, '"+ title+ "','" + short_desc + "','" + long_desc + "','" + course_link + "','" + video_link + "')";
-			*/
-			
-			String query = "INSERT INTO `MOOCentral`.`coursedata` (`id`, `title`, `short_desc`,`course_link`, `video_link`, `start_date`, `course_length`, `course_image`, `category`, `site`, `profname`, `profimage` )" + 
-					"VALUES(NULL, '" + title + "','" + short_desc + "','" + course_link + "','" + video_link + "','" + start_date + "','" + course_length + "','" + course_image + "','" + category + "','" + thesite + "','" + profname + "','" + profimage + "')";
-			
-			System.out.println(query);
-			statement.executeUpdate(query);
-			
-			
+			//
 			/*
 			System.out.println("**************");
 			System.out.println("course details");
@@ -104,14 +115,17 @@ public class IScrapeOpen2Study {
 			System.out.println("     language: " + language);
 			System.out.println("  certificate: " + certificate);
 			System.out.println("   university: " + university);
-			
-			*/
+			//*/
+
+			String query = 
+				"INSERT INTO `MOOCentral`.`coursedata` (`id`, `title`, `short_desc`,`course_link`, `video_link`, " + 
+				"`start_date`, `course_length`, `course_image`, `category`, `site`, `profname`, `profimage` )" + 
+				"VALUES(NULL, '" + title + "','" + short_desc + "','" + course_link + "','" + video_link + "','" + 
+				start_date + "','" + course_length + "','" + course_image + "','" + category + "','" + thesite + "','" + profname + "','" + profimage + "') ;";
+			//statement.executeUpdate(query);
+			//
+			System.out.println(query);
 		}
-		statement.close();
-		
-		//String query = "insert into course_data values(null,'"+CourseName+"','"+SCrsDesrpTemp+"','"+CrsDes+"','"+crsurl+"','"+youtube+"',"+StrDate+","+crsduration+",'"+CrsImg+"','','Edx')";
-		//System.out.println(query);                	
-		//statement.executeUpdate(query);// skip writing to database; focus on data printout to a text file instead.
 		//statement.close(); 
 		//connection.close();   
 	}
