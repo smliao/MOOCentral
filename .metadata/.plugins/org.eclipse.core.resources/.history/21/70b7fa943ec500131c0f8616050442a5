@@ -42,7 +42,6 @@ public class IScrapeOpen2Study {
 			String long_desc_top = crsdoc.select("div[class=summary]").get(0).text();
 			String long_desc_bottom = crsdoc.select("div[class=full-body]").get(0).text();
 			String long_desc = long_desc_top + long_desc_bottom;
-			long_desc = long_desc.replaceAll("'", "''");
 			
 			String video_link = crsdoc.select("iframe").attr("src");
 			
@@ -88,12 +87,9 @@ public class IScrapeOpen2Study {
 				course_length = Integer.toString(days / 7) + " weeks";
 			}
 			
-			SimpleDateFormat formatter = new SimpleDateFormat("MM/dd/yyyy");
-			
-			Date thedate = formatter.parse(start_date); 
-			formatter = new SimpleDateFormat("yyyy-MM-dd");
-			String startdate = formatter.format(thedate);
-			
+			DateFormat formatter = new SimpleDateFormat("MM/dd/yyyy");
+			Date startdate = (Date)formatter.parse(start_date); 
+
 			////// Not available, default values assumed.
 			int course_fee = 0;
 			String language = "English";
@@ -136,32 +132,28 @@ public class IScrapeOpen2Study {
 			
 			String coursedetails_query = 
 					"INSERT INTO `moocs160`.`coursedetails` (`id`, `profname`, `profimage`, `course_id`) " +
-							" VALUES(" + i +", '" + profname + "','" + profimage + "'," + (i + 3) + ")";
-			
+							" VALUES(" + i +", '" + profname + "','" + profimage + "'," + temp_num + ")";
+			temp_num *= 3;
 			
 			String course_data_query = 
 					"INSERT INTO `moocs160`.`course_data` (`id`, `title`, `short_desc`, `long_desc`, `course_link`, `video_link`, `start_date`"
 					+ ", `course_length`, `course_image`, `category`, `site`, `course_fee`, `language`, `certificate`, `university`, `time_scraped`)" +
 					"VALUES(NULL,'" + title + "','" + short_desc + "','" + long_desc + "','" + course_link + "','" + 
-					video_link + "','" + startdate + "','" + course_length + "','" + course_image + "','" + category 
+					video_link + "','" + start_date + "','" + course_length + "','" + course_image + "','" + category 
 					+ "','" + site + "'," + course_fee + ",'" + language + "','" + certificate + "','" + university + "','" + 
-					dateFormat.format(date) + "') ;";
+					dateFormat.format(date) + "')";
 			/*
 			String query = 
 				"INSERT INTO `MOOCentral`.`coursedata` (`id`, `title`, `short_desc`,`course_link`, `video_link`, " + 
 				"`start_date`, `course_length`, `course_image`, `category`, `site`, `profname`, `profimage` )" + 
-				"VALUES(NULL,'" + title + "','" + short_desc + "','" + course_link + "','" + video_link + "','" + 
+				"VALUES(NULL, '" + title + "','" + short_desc + "','" + course_link + "','" + video_link + "','" + 
 				start_date + "','" + course_length + "','" + course_image + "','" + category + "','" + thesite + "','" + profname + "','" + profimage + "') ;";
 			//statement.executeUpdate(query);
 			
 			*/
 			statement.executeUpdate(course_data_query);
-			
-			statement.executeUpdate(coursedetails_query);
-			
-			
 			//System.out.println(query);
-			System.out.println(coursedetails_query);
+			//System.out.println(coursedetails_query);
 			System.out.println(course_data_query);
 		}
 		statement.close(); 

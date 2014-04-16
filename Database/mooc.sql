@@ -30,7 +30,7 @@ USE `moocs160`;
 
 CREATE TABLE IF NOT EXISTS `coursedetails` (
   `id` int(4) NOT NULL,
-  `profname` varchar(30) NOT NULL,
+  `profname` text NOT NULL,
   `profimage` text NOT NULL,
   `course_id` int(5) DEFAULT NULL,
   PRIMARY KEY (`id`),
@@ -51,7 +51,7 @@ CREATE TABLE IF NOT EXISTS `course_data` (
   `course_link` text NOT NULL,
   `video_link` text NOT NULL,
   `start_date` date NOT NULL,
-  `course_length` int(11) NOT NULL,
+  `course_length` text NOT NULL,
   `course_image` text NOT NULL,
   `category` varchar(100) NOT NULL,
   `site` text NOT NULL,

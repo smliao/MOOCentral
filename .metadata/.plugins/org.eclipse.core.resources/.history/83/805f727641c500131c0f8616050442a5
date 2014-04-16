@@ -155,13 +155,13 @@ public class IScrapeOpen2Study {
 			//statement.executeUpdate(query);
 			
 			*/
-			statement.executeUpdate(course_data_query);
+			//statement.executeUpdate(course_data_query);
 			
 			statement.executeUpdate(coursedetails_query);
 			
 			
 			//System.out.println(query);
-			System.out.println(coursedetails_query);
+			//System.out.println(coursedetails_query);
 			System.out.println(course_data_query);
 		}
 		statement.close(); 

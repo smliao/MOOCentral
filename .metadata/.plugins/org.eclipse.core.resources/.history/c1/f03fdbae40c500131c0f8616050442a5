@@ -136,8 +136,8 @@ public class IScrapeOpen2Study {
 			
 			String coursedetails_query = 
 					"INSERT INTO `moocs160`.`coursedetails` (`id`, `profname`, `profimage`, `course_id`) " +
-							" VALUES(" + i +", '" + profname + "','" + profimage + "'," + (i + 3) + ")";
-			
+							" VALUES(" + i +", '" + profname + "','" + profimage + "'," + temp_num + ")";
+			temp_num *= 3;
 			
 			String course_data_query = 
 					"INSERT INTO `moocs160`.`course_data` (`id`, `title`, `short_desc`, `long_desc`, `course_link`, `video_link`, `start_date`"
@@ -156,12 +156,8 @@ public class IScrapeOpen2Study {
 			
 			*/
 			statement.executeUpdate(course_data_query);
-			
-			statement.executeUpdate(coursedetails_query);
-			
-			
 			//System.out.println(query);
-			System.out.println(coursedetails_query);
+			//System.out.println(coursedetails_query);
 			System.out.println(course_data_query);
 		}
 		statement.close(); 
