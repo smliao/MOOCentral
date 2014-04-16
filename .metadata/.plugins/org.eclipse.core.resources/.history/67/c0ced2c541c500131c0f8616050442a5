@@ -161,7 +161,7 @@ public class IScrapeOpen2Study {
 			
 			
 			//System.out.println(query);
-			System.out.println(coursedetails_query);
+			//System.out.println(coursedetails_query);
 			System.out.println(course_data_query);
 		}
 		statement.close(); 
