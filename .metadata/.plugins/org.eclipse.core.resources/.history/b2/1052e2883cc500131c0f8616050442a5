@@ -14,10 +14,6 @@ public class IScrapeOpen2Study {
 		//java.sql.Connection connection = DriverManager.getConnection("jdbc:mysql://sjsu-cs.org:22/sjsucsor_160s2g42014s","sjsucsor_s2g414s","abcd#1234");
 		//Statement statement = connection.createStatement();
 		
-		Class.forName("com.mysql.jdbc.Driver").newInstance();
-		java.sql.Connection connection = DriverManager.getConnection("jdbc:mysql://localhost/moocs160", "root","");
-		Statement statement = connection.createStatement();
-		
 		String site = "https://www.open2study.com";
 		String crcsUrl = "https://www.open2study.com/courses";
 		Document doc = Jsoup.connect(crcsUrl).get();
@@ -125,7 +121,7 @@ public class IScrapeOpen2Study {
 
 			DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
 			Date date = new Date();
-			//System.out.println(dateFormat.format(date));
+			System.out.println(dateFormat.format(date));
 			
 			String coursedetails_query = 
 					"INSERT INTO `moocs160`.`coursedetails` (`id`, `profname`, `profimage`, `course_id`) " +
@@ -134,7 +130,7 @@ public class IScrapeOpen2Study {
 			
 			String course_data_query = 
 					"INSERT INTO `moocs160`.`course_data` (`id`, `title`, `short_desc`, `long_desc`, `course_link`, `video_link`, `start_date`"
-					+ ", `course_length`, `course_image`, `category`, `site`, `course_fee`, `language`, `certificate`, `university`, `time_scraped`)" +
+					+ ", `course_length`, `course_image`, `category`, `site`, `course_fee`, `language`, `certificate`, `university`, `time_scraped`) +" +
 					"VALUES(NULL,'" + title + "','" + short_desc + "','" + long_desc + "','" + course_link + "','" + 
 					video_link + "','" + start_date + "','" + course_length + "','" + course_image + "','" + category 
 					+ "','" + site + "'," + course_fee + ",'" + language + "','" + certificate + "','" + university + "','" + 
@@ -146,14 +142,12 @@ public class IScrapeOpen2Study {
 				"VALUES(NULL, '" + title + "','" + short_desc + "','" + course_link + "','" + video_link + "','" + 
 				start_date + "','" + course_length + "','" + course_image + "','" + category + "','" + thesite + "','" + profname + "','" + profimage + "') ;";
 			//statement.executeUpdate(query);
-			
 			*/
-			statement.executeUpdate(course_data_query);
 			//System.out.println(query);
 			//System.out.println(coursedetails_query);
 			System.out.println(course_data_query);
 		}
-		statement.close(); 
-		connection.close();   
+		//statement.close(); 
+		//connection.close();   
 	}
 }

@@ -15,7 +15,7 @@ public class IScrapeOpen2Study {
 		//Statement statement = connection.createStatement();
 		
 		Class.forName("com.mysql.jdbc.Driver").newInstance();
-		java.sql.Connection connection = DriverManager.getConnection("jdbc:mysql://localhost/moocs160", "root","");
+		java.sql.Connection connection = DriverManager.getConnection("jdbc:mysql://localhost/moocs1600", "root","");
 		Statement statement = connection.createStatement();
 		
 		String site = "https://www.open2study.com";
