@@ -123,14 +123,13 @@ public class Canvas {
 					diffTime = (diffTime / (1000 * 60 * 60 * 24)) / 7;
 					CrsLength = diffTime + " weeks";
 				}
-//				String CrsFee = CrsInfo.substring(CrsInfo.indexOf("ment:") + 6);
+				String CrsFee = CrsInfo.substring(CrsInfo.indexOf("ment:") + 6);
 //				System.out.println("Start Date:  " + CrsDate);
 //				System.out.println("End Date:    " + CrsEnd);
 //				System.out.println("Duration:    " + CrsLength);
 //				System.out.println("Fee:         " + CrsFee);
 //				System.out.println("-----------------------------------------------");
 				
-				int CrsFee = 0;
 				String video_link = "N/A";
 				String category = "N/A";
 				String site = "Canvas";
