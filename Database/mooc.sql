@@ -19,9 +19,9 @@ SET time_zone = "+00:00";
 --
 -- Database: `moocs160`
 --
-CREATE DATABASE IF NOT EXISTS `moocs160` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+/*CREATE DATABASE IF NOT EXISTS `moocs160` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 USE `moocs160`;
-
+*/
 -- --------------------------------------------------------
 
 --

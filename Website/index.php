@@ -10,16 +10,18 @@
 		<input name="keyword" type="text" placeholder="Search for a course" />
 		<input type="submit" value="Query" />
 	</form>
+
+	<a href="data.php">Testing Purposes page</a>
 	</div>
 
 <?php
 	$con = mysqli_connect("localhost", "sjsucsor_s2g414s", "abcd#1234", "sjsucsor_160s2g42014s");
-	//$con = mysqli_connect("localhost", "root", "", "MOOCentral");	
+	//$con = mysqli_connect("localhost", "root", "", "moocs160");	
 	if(mysqli_connect_errno()){
 		echo "failed to connect to MySQL: " . mysqli_connect_errno();
 	}
 
-	$data = mysqli_query($con, "Select * from coursedata");
+	$data = mysqli_query($con, "Select * from course_data join coursedetails where coursedetails.course_id = course_data.id");
 
 	echo "<table border = '1' 
 		<tr>
@@ -35,7 +37,7 @@
 	while($row = mysqli_fetch_array($data)){
 		echo "<tr>";
 	//	echo "<td>" . $row['id'] . "</td>";
-		echo "<td>" . $row['title'] . "</td>";
+		echo "<td><a href=\"" . $row['course_link'] . "\" target=\"_blank\">" . $row['title'] . "</a></td>";
 	//	echo "<td>" . $row['short_desc'] . "</td>";
 		// echo "<td>" . $row['long_desc'] . "</td>";
 	//	echo "<td><a href=\"" . $row['course_link'] .  "\" target=\"_blank\">Course Link</a></td>";
@@ -49,7 +51,7 @@
 
 		echo "<td>" . $row['start_date'] . "</td>";
 		echo "<td>" . $row['course_length'] . "</td>";
-		echo "<td><a href=\"" . $row['course_link'] . "\" target=\"_blank\"><image src=\"" . $row['course_image'] . "\" alt=\"missing course image\" height=\"100\" width=\"100\"></a></td>";
+		echo "<td><image src=\"" . $row['course_image'] . "\" alt=\"missing course image\" height=\"100\" width=\"100\"></td>";
 	//	echo "<td>" . $row['category'] . "</td>";
 		echo "<td>" . $row['site'] . "</td>";
 		echo "<td>" . $row['profname'] . "</td>";
