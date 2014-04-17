@@ -32,9 +32,8 @@ public class Canvas {
 		//Statement statement = connection.createStatement();
 		
 		Class.forName("com.mysql.jdbc.Driver").newInstance();
-		java.sql.Connection connection = DriverManager.getConnection("jdbc:mysql://localhost/moocs160", "root","");
-		Statement statement = connection.createStatement();
-		
+		java.sql.Connection connection = DriverManager.getConnection("jdbc:mysql://localhost/moocs160", "root","root");
+		Statement statement = connection.createStatement();		
 		
 		for(int a=0; a < pgcrs.size(); a++)
 		{
@@ -48,9 +47,9 @@ public class Canvas {
 			{
 				//Course Name
 				String CrsName = link.get(j).attr("title");
-//				System.out.println("Title:       " + CrsName);
 				CrsName = CrsName.replace("'", "''");
 				CrsName = CrsName.replace(",", "");
+//				System.out.println("Title:       " + CrsName);
 				//Course URL
 				String CrsURL = link.get(j).attr("href");
 //				System.out.println("URL:         " + CrsURL);
@@ -63,6 +62,9 @@ public class Canvas {
 				CrsDesc = CrsDesc.replace("'", "''");
 				CrsDesc = CrsDesc.replace(",", "");
 //				System.out.println("Description: " + CrsDesc);
+				String CrsShortDesc = "";
+				CrsShortDesc = CrsDesc.substring(0, CrsDesc.length()/4);
+//				System.out.println("Short Desc:  " + CrsShortDesc);
 				//Get the course image
 				Element img = crsdoc.select("meta[property=og:image:secure_url]").first();
 				String CrsImg = img.attr("content");
@@ -70,8 +72,9 @@ public class Canvas {
 				//Get the course school image
 				Element schoolimg = crsdoc.select("div.school-logo > img").first();
 				String CrsSchoolImg = schoolimg.attr("src");
+				String CrsSchoolName = schoolimg.attr("title");
 				CrsSchoolImg = "https://www.canvas.net" + CrsSchoolImg;
-//				System.out.println("School Logo: " + CrsSchoolImg);
+//				System.out.println("School Logo: " + CrsSchoolName + " - " + CrsSchoolImg);
 				//Get the professor logo
 				//Get the course school image
 				Element profimg = crsdoc.select("div.instructor-bio > img").first();
@@ -83,7 +86,7 @@ public class Canvas {
 				}
 				else
 				{
-					CrsProfImg = "/null";
+					CrsProfImg = "/placeholder";
 				}
 				String CrsProfName = profname.text();
 				CrsProfImg = "https://www.canvas.net" + CrsProfImg;
@@ -93,7 +96,7 @@ public class Canvas {
 				String CrsInfo = date.text();
 				String CrsDate = CrsInfo.substring(0, CrsInfo.indexOf(" Cost"));
 				String CrsEnd = "N/A";
-				String CrsLength = "N/A";
+				int CrsLength = 0;
 				SimpleDateFormat convertToDate = new SimpleDateFormat("MMM d, yyyy");
 				SimpleDateFormat convertToSQLDate = new SimpleDateFormat("yyyy-MM-dd");
 				if(CrsDate.contains("Self-paced"))
@@ -101,7 +104,6 @@ public class Canvas {
 					CrsDate = CrsDate.substring(22);
 					java.util.Date startDate = convertToDate.parse(CrsDate);
 					CrsDate = convertToSQLDate.format(startDate);
-					CrsLength = "Self-paced";
 				}
 				else if(CrsDate.contains("Coming"))
 				{
@@ -121,61 +123,47 @@ public class Canvas {
 					long endTime = endDate.getTime();
 					long diffTime = endTime - startTime;
 					diffTime = (diffTime / (1000 * 60 * 60 * 24)) / 7;
-					CrsLength = diffTime + " weeks";
+					CrsLength = (int) diffTime;
 				}
-//				String CrsFee = CrsInfo.substring(CrsInfo.indexOf("ment:") + 6);
+				String CrsFeeHolder = CrsInfo.substring(CrsInfo.indexOf("ment:") + 6);
+				int CrsFee = 0;
+				if(!CrsFeeHolder.equalsIgnoreCase("Free"))
+				{
+					CrsFeeHolder= CrsFeeHolder.replaceAll("[^0-9]", "");
+//					System.out.println(CrsFeeHolder);
+					CrsFee = Integer.parseInt(CrsFeeHolder);
+				}
 //				System.out.println("Start Date:  " + CrsDate);
 //				System.out.println("End Date:    " + CrsEnd);
 //				System.out.println("Duration:    " + CrsLength);
 //				System.out.println("Fee:         " + CrsFee);
 //				System.out.println("-----------------------------------------------");
-				
-				int CrsFee = 0;
+
 				String video_link = "N/A";
 				String category = "N/A";
 				String site = "Canvas";
 				String language = "English";
 				String certificate = "No";
-				String university = "TODO";
 				
 				DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
 				Date entry_date = new Date();
 				
 				String coursedetails_query = 
-					"INSERT INTO `moocs160`.`coursedetails` (`id`, `profname`, `profimage`, `course_id`) " +
-					" VALUES(" + (j + 49) +", '" + CrsProfName + "','" + CrsProfImg + "'," + (j + 53) + ")";
+						"INSERT INTO `moocs160`.`coursedetails` (`id`, `profname`, `profimage`, `course_id`) " +
+						" VALUES(" + (j + 49) + ", '" + CrsProfName + "','" + CrsProfImg + "'," + (j + 53) + ")";
 				
 				String course_data_query = 
 						"INSERT INTO `moocs160`.`course_data` (`id`, `title`, `short_desc`, `long_desc`, `course_link`, `video_link`, `start_date`"
 						+ ", `course_length`, `course_image`, `category`, `site`, `course_fee`, `language`, `certificate`, `university`, `time_scraped`)" +
-						"VALUES(NULL,'" + CrsName + "','" + CrsDesc + "','" + CrsDesc + "','" + CrsURL + "','" + 
+						"VALUES(NULL,'" + CrsName + "','" + CrsShortDesc + "','" + CrsDesc + "','" + CrsURL + "','" + 
 						video_link + "','" + CrsDate + "','" + CrsLength + "','" + CrsImg + "','" + category 
-						+ "','" + site + "'," + CrsFee + ",'" + language + "','" + certificate + "','" + university + "','" + 
+						+ "','" + site + "'," + CrsFee + ",'" + language + "','" + certificate + "','" + CrsSchoolName + "','" + 
 						dateFormat.format(entry_date) + "') ;";
 				
-				/*
-				String query = "INSERT INTO `MOOCentral`.`coursedata` (`id`, `title`, `short_desc`,`course_link`, `video_link`, `start_date`, `course_length`, `course_image`, `category`, `site`, `profname`, `profimage` )" + 
-						"VALUES(NULL, '" + CrsName + "','" + CrsDesc + "','" + CrsURL + "','" + video_link + "','" + CrsDate + "','" + CrsLength + "','" + CrsImg + "','" + category + "','" + site + "','" + CrsProfName + "','" + CrsProfImg + "')";
-				*/
 				//statement.executeUpdate(course_data_query);
 				statement.executeUpdate(coursedetails_query);
-				
-				
-				
-				
-				
-				
-				
-				
-				//System.out.println(query);
-				//statement.executeUpdate(query);
-				
-				
-				System.out.println(coursedetails_query);
-				System.out.println(course_data_query);
 			 }
 		}
-		statement.close(); 
-		connection.close();   
+		connection.close();  
 	}
 }
