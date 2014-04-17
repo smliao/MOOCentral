@@ -143,7 +143,7 @@ public class Canvas {
 				
 				String coursedetails_query = 
 					"INSERT INTO `moocs160`.`coursedetails` (`id`, `profname`, `profimage`, `course_id`) " +
-					" VALUES(" + (j + 49) +", '" + CrsProfName + "','" + CrsProfImg + "'," + (j + 53) + ")";
+					" VALUES(" + (j + 49) +", '" + CrsProfName + "','" + CrsProfImg + "'," + (j + 52) + ")";
 				
 				String course_data_query = 
 						"INSERT INTO `moocs160`.`course_data` (`id`, `title`, `short_desc`, `long_desc`, `course_link`, `video_link`, `start_date`"
