@@ -35,7 +35,7 @@
 
 <?php
 	//$con = mysqli_connect("localhost", "sjsucsor_s2g414s", "abcd#1234", "sjsucsor_160s2g42014s");
-	$con = mysqli_connect("localhost", "root", "", "moocs160");	
+	$con = mysqli_connect("localhost", "root", "root", "moocs160");	
 	if(mysqli_connect_errno()){
 		echo "failed to connect to MySQL: " . mysqli_connect_errno();
 	}
@@ -57,10 +57,10 @@
 					    Log in <span></span>
 					  </a>
 					  <div id="login-content">
-					    <form>
+					    <form name="login" action="login.php" method="post">
 					      <fieldset id="inputs">
-					        <input id="username" type="email" name="Email" placeholder="Your email address" required>   
-					        <input id="password" type="password" name="Password" placeholder="Password" required>
+					        <input id="username" type="text" name="username" placeholder="Your username" required>   
+					        <input id="password" type="password" name="password" placeholder="Password" required>
 					      </fieldset>
 					      <fieldset id="actions">
 					        <input type="submit" id="submit" value="Log in">
@@ -70,7 +70,7 @@
 					  </div>                     
 					</li>
 					<li id="signup">
-					  <a href="">Sign up FREE</a>
+					  <a href="registration.html">Sign up FREE</a>
 					</li>
 				</ul>
 			</nav>
