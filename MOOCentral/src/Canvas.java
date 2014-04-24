@@ -89,6 +89,10 @@ public class Canvas {
 					CrsProfImg = "/placeholder";
 				}
 				String CrsProfName = profname.text();
+				if(CrsProfName.length() > 30)
+				{
+					CrsProfName = CrsProfName.substring(0, 30);
+				}
 				CrsProfImg = "https://www.canvas.net" + CrsProfImg;
 //				System.out.println("Professor:   " + CrsProfName + " - " + CrsProfImg);
 				//Get the course date, duration, and cost.
@@ -150,7 +154,7 @@ public class Canvas {
 				
 				String coursedetails_query = 
 						"INSERT INTO `moocs160`.`coursedetails` (`id`, `profname`, `profimage`, `course_id`) " +
-						" VALUES(" + (j + 49) + ", '" + CrsProfName + "','" + CrsProfImg + "'," + (j + 53) + ")";
+						" VALUES(" + (j + 1) + ", '" + CrsProfName + "','" + CrsProfImg + "'," + (j + 1) + ")";
 				
 				String course_data_query = 
 						"INSERT INTO `moocs160`.`course_data` (`id`, `title`, `short_desc`, `long_desc`, `course_link`, `video_link`, `start_date`"
@@ -160,7 +164,7 @@ public class Canvas {
 						+ "','" + site + "'," + CrsFee + ",'" + language + "','" + certificate + "','" + CrsSchoolName + "','" + 
 						dateFormat.format(entry_date) + "') ;";
 				
-				//statement.executeUpdate(course_data_query);
+				statement.executeUpdate(course_data_query);
 				statement.executeUpdate(coursedetails_query);
 			 }
 		}
