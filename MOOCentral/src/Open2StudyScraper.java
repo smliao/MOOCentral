@@ -45,10 +45,16 @@ public class Open2StudyScraper {
 			Document crsdoc = Jsoup.connect(course_link).get();
 
 			String short_desc = crsdoc.select("div[class=offering_body]").get(0).text();
+			short_desc = short_desc.replace("?", "");
+			short_desc = short_desc.replace("'", "''");
+			short_desc = short_desc.replace(",", "");
 			
 			String long_desc_top = crsdoc.select("div[class=summary]").get(0).text();
 			String long_desc_bottom = crsdoc.select("div[class=full-body]").get(0).text();
 			String long_desc = long_desc_top + long_desc_bottom;
+			long_desc = long_desc.replace("?", "");
+			long_desc = long_desc.replace("'", "''");
+			long_desc = long_desc.replace(",", "");
 			
 			String video_link = crsdoc.select("iframe").attr("src");
 			
@@ -69,6 +75,9 @@ public class Open2StudyScraper {
 			String profimage = crsdoc.select("img[class=image-style-teacher-small-profile]").get(0).attr("src");
 
 			String title = crsdoc.select("h1[class=page-title offering_title]").get(0).text();
+			title = title.replace("?", "");
+			title = title.replace("'", "''");
+			title = title.replace(",", "");
 			
 			String category = "N/A";
 			String[] temp = title.split("[\\(\\)]");
@@ -142,7 +151,7 @@ public class Open2StudyScraper {
 			String course_data_query = 
 					"INSERT INTO `course_data` (`id`, `title`, `short_desc`, `long_desc`, `course_link`, `video_link`, `start_date`"
 					+ ", `course_length`, `course_image`, `category`, `site`, `course_fee`, `language`, `certificate`, `university`, `time_scraped`) " +
-					"VALUES('" + (i + start_id) + "','" + title + "','" + short_desc.replace("'","\\'") + "','" + long_desc.replace("'","\\'") + "','" + course_link + "','" + 
+					"VALUES('" + (i + start_id) + "','" + title + "','" + short_desc + "','" + long_desc + "','" + course_link + "','" + 
 					video_link + "','" + start_date_formatted + "','" + course_length + "','" + course_image + "','" + category 
 					+ "','" + thesite + "','" + course_fee + "','" + language + "','" + certificate + "','" + university + "',now()) ;";
 			String coursedetails_query = 
