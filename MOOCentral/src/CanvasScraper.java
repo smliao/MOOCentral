@@ -27,11 +27,8 @@ public class CanvasScraper {
 		ArrayList<String> pgcrs = new ArrayList<String>();
 		pgcrs.add(url);
 		
-		//Class.forName("com.mysql.jdbc.Driver").newInstance();
-		//java.sql.Connection connection = DriverManager.getConnection("jdbc:mysql://sjsu-cs.org:22/sjsucsor_160s2g42014s","sjsucsor_s2g414s","abcd#1234");
-		//Statement statement = connection.createStatement();
-		
 		Class.forName("com.mysql.jdbc.Driver").newInstance();
+		//java.sql.Connection connection = DriverManager.getConnection("jdbc:mysql://sjsu-cs.org:22/sjsucsor_160s2g42014s","sjsucsor_s2g414s","abcd#1234");
 		java.sql.Connection connection = DriverManager.getConnection("jdbc:mysql://localhost/moocs160", "root","root");
 		Statement statement = connection.createStatement();		
 		
@@ -74,6 +71,7 @@ public class CanvasScraper {
 				Element schoolimg = crsdoc.select("div.school-logo > img").first();
 				String CrsSchoolImg = schoolimg.attr("src");
 				String CrsSchoolName = schoolimg.attr("title");
+				CrsSchoolName = CrsSchoolName.replace(",", "");
 				CrsSchoolImg = "https://www.canvas.net" + CrsSchoolImg;
 //				System.out.println("School Logo: " + CrsSchoolName + " - " + CrsSchoolImg);
 				//Get the professor logo
