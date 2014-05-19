@@ -23,7 +23,7 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 CREATE TABLE IF NOT EXISTS `coursedetails` (
   `id` int(5) NOT NULL AUTO_INCREMENT,
   `profname` varchar(100) COLLATE utf16_unicode_ci NOT NULL,
-  `profimage` text COLLATE utf16_unicode_ci NOT NULL,
+  `profimage` text CHARACTER SET latin1 NOT NULL,
   `course_id` int(5) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `course_id` (`course_id`)
@@ -40,20 +40,20 @@ CREATE TABLE IF NOT EXISTS `course_data` (
   `title` text COLLATE utf16_unicode_ci NOT NULL,
   `short_desc` text COLLATE utf16_unicode_ci NOT NULL,
   `long_desc` text COLLATE utf16_unicode_ci NOT NULL,
-  `course_link` text COLLATE utf16_unicode_ci NOT NULL,
-  `video_link` text COLLATE utf16_unicode_ci NOT NULL,
+  `course_link` text CHARACTER SET latin1 NOT NULL,
+  `video_link` text CHARACTER SET latin1 NOT NULL,
   `start_date` date NOT NULL,
   `course_length` int(11) NOT NULL,
-  `course_image` text COLLATE utf16_unicode_ci NOT NULL,
-  `category` varchar(100) COLLATE utf16_unicode_ci NOT NULL,
-  `site` text COLLATE utf16_unicode_ci NOT NULL,
+  `course_image` text CHARACTER SET latin1 NOT NULL,
+  `category` varchar(100) CHARACTER SET latin1 NOT NULL,
+  `site` text CHARACTER SET latin1 NOT NULL,
   `course_fee` int(11) NOT NULL,
-  `language` text COLLATE utf16_unicode_ci NOT NULL,
-  `certificate` enum('yes','no') COLLATE utf16_unicode_ci NOT NULL,
-  `university` text COLLATE utf16_unicode_ci NOT NULL,
+  `language` text CHARACTER SET latin1 NOT NULL,
+  `certificate` enum('yes','no') CHARACTER SET latin1 NOT NULL,
+  `university` text CHARACTER SET latin1 NOT NULL,
   `time_scraped` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf16 COLLATE=utf16_unicode_ci;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf16 COLLATE=utf16_unicode_ci;
 
 -- --------------------------------------------------------
 
